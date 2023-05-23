@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:datagride="clr-namespace:Maui.DataGrid;assembly=Maui.DataGrid"
+             xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+             x:Class="MauiApp13.pages.prix.typedeverresajout">
+
+    <!---#FF0000! the main frame -->
+    <Frame BorderColor="#ff9000" CornerRadius="0" Padding="0" WidthRequest="1000" HeightRequest="800"
+          >
+        <Border BackgroundColor="#ff9000"  WidthRequest="1000" HeightRequest="800" HorizontalOptions="Center">
+
+            <!---#FF0000! the main GRID splited in 2 -->
+            <Grid Padding="10" Background="#282828">
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="0.55*" />
+                    <RowDefinition Height="0.45*" />
+
+                </Grid.RowDefinitions>
+                <!---#FF0000! the GRID containing the title + type de verre informations + unifier prix -->
+                <Grid Padding="1" Background="#282828" Grid.Row="0"  >
+
+                    <Grid.RowDefinitions >
+                        <RowDefinition Height="0.2*" />
+                        <RowDefinition Height="0.8*" />
+
+                    </Grid.RowDefinitions>
+                    <!---#FF0000! the GRID of title -->
+                    <Grid Grid.Row="0" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.2*" />
+                            <ColumnDefinition Width="0.6*" />
+                            <ColumnDefinition Width="0.1*" />
+                            <ColumnDefinition Width="0.05*" />
+                            <ColumnDefinition Width="0.05*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="1"  Text="Nouveau Type de Verre" FontSize="19" TextColor="#b1b1be"  
+                       MinimumWidthRequest="150" VerticalTextAlignment="Center"
+                               MaximumWidthRequest="300"  HeightRequest="27"
+                       ></Label>
+                        <ImageButton  Grid.Column="4" Clicked="Button_Clicked" Source="clise.png"
+                               Aspect="AspectFit" Padding="0"
+                            MaximumHeightRequest="10"
+                                
+                             MinimumHeightRequest="5"
+                             MaximumWidthRequest="10"
+                             MinimumWidthRequest="50"
+                              BackgroundColor="Transparent" >
+
+                        </ImageButton>
+
+                    </Grid>
+                    <!---#FF0000! the GRID containing type de verre informations + unifier prix -->
+                    <Grid Grid.Row="1">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.4*" />
+                            <ColumnDefinition Width="0.6*" />
+
+                        </Grid.ColumnDefinitions>
+                        <!---#FF0000! the GRID of informations-->
+                        <Grid Grid.Column="0" Padding="25">
+
+
+                        <Grid.RowDefinitions>
+
+                            <RowDefinition Height="0.125*" />
+                            <RowDefinition Height="0.125*" />
+                            <RowDefinition Height="0.125*" />
+                            <RowDefinition Height="0.125*" />
+                            <RowDefinition Height="0.1*" />
+                            <RowDefinition Height="0.3*" />
+                            <RowDefinition Height="0.1*" />
+
+
+                            </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.4*" />
+                            <ColumnDefinition Width="0.6*" />
+
+                        </Grid.ColumnDefinitions>
+                            <Label Grid.Row="0" Grid.Column="0" Text="Nom" FontSize="14" TextColor="#b1b1be"  
+                       MinimumWidthRequest="150" VerticalTextAlignment="End"
+                               MaximumWidthRequest="190"  HeightRequest="27"
+                       ></Label>
+                            <Label Grid.Row="1" Grid.Column="0" Text="Source" FontSize="14" TextColor="#b1b1be"  
+                       MinimumWidthRequest="150" VerticalTextAlignment="End"
+                               MaximumWidthRequest="190"  HeightRequest="27"
+                       ></Label>
+                            <Label Grid.Row="2" Grid.Column="0" Text="Pourcenage" FontSize="14" TextColor="#b1b1be"  
+                       MinimumWidthRequest="150" VerticalTextAlignment="End"
+                               MaximumWidthRequest="190"  HeightRequest="27"
+                       ></Label>
+                            <Label Grid.Row="3" Grid.Column="0" Text="Diamètre" FontSize="14" TextColor="#b1b1be"  
+                       MinimumWidthRequest="150" VerticalTextAlignment="End"
+                               MaximumWidthRequest="190"  HeightRequest="27"
+                       ></Label>
+                            
+
+
+
+
+
+                            <Frame CornerRadius="20" Padding="1" BorderColor="Transparent"  
+                                      Background="#4b4747" Grid.Row="0" Grid.Column="1" MinimumWidthRequest="150"
+                               MaximumWidthRequest="190"  HeightRequest="35">
+                            <Entry Placeholder="Enter text here..."  TextColor="#b1b1be" FontSize="14"
+                                    VerticalTextAlignment="Start" MaximumHeightRequest="10"
+                                   />
+                            </Frame>
+
+                            <Frame CornerRadius="20" Padding="1" BorderColor="Transparent" 
+                                  
+                                      Background="#4b4747"  Grid.Row="1" Grid.Column="1" MinimumWidthRequest="190"
+                               MaximumWidthRequest="190"  HeightRequest="37">
+                                <Grid>
+
+                                    <Entry Placeholder="Enter text here..."  TextColor="#b1b1be" FontSize="14"
+                                    VerticalTextAlignment="Start" MaximumHeightRequest="10"
+                                   />
+                                    <Picker   x:Name="MyPicker" Background="#4b4747"
+                                       HorizontalOptions="End" VerticalOptions="Start"
+                                    HeightRequest="5"
+                     WidthRequest="50">
+                                        <Picker.ItemsSource>
+                                            <x:Array Type="{x:Type x:String}">
+                                                <x:String>Option 1</x:String>
+                                                <x:String>Option 2</x:String>
+                                                <x:String>Option 3</x:String>
+                                            </x:Array>
+                                        </Picker.ItemsSource>
+                                    </Picker>
+
+                                </Grid>
+                            </Frame>
+
+
+
+                            <Frame CornerRadius="20" Padding="1" BorderColor="Transparent"
+                                      Background="#4b4747" Grid.Row="2" Grid.Column="1" MinimumWidthRequest="180"
+                               MaximumWidthRequest="190"  HeightRequest="35">
+                            <Entry Placeholder="Enter text here..."  TextColor="#b1b1be" FontSize="14"
+                                    VerticalTextAlignment="Start" MaximumHeightRequest="10"
+                                   />
+                        </Frame>
+                        <Frame CornerRadius="20" Padding="1" BorderColor="Transparent"
+                                      Background="#4b4747" Grid.Row="3" Grid.Column="1" MinimumWidthRequest="150"
+                               MaximumWidthRequest="190"  HeightRequest="35">
+                            <Entry Placeholder="Enter text here..."  TextColor="#b1b1be" FontSize="14"
+                                    VerticalTextAlignment="Start" MaximumHeightRequest="10"
+                                   />
+                        </Frame>
+
+                            <StackLayout Grid.Row="5">
+                                <Label Text="le prix ?" TextColor="#b1b1be" />
+                                <RadioButton Content="Prix d'achat" TextColor="#b1b1be"/>
+
+                                <RadioButton Content="Prix de Vente" TextColor="#b1b1be"
+                 IsChecked="true" />
+                            </StackLayout>
+
+
+
+                        </Grid>
+                        <!---#FF0000! the GRID of unified prix -->
+                        <Grid Grid.Column="1" Padding="25">
+
+
+                            <Grid.RowDefinitions>
+
+                                <RowDefinition Height="0.125*" />
+                                <RowDefinition Height="0.125*" />
+                                <RowDefinition Height="0.125*" />
+                                <RowDefinition Height="0.125*" />
+                                <RowDefinition Height="0.1*" />
+                                <RowDefinition Height="0.3*" />
+                                <RowDefinition Height="0.1*" />
+
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.4*" />
+                                <ColumnDefinition Width="0.6*" />
+
+                            </Grid.ColumnDefinitions>
+
+                            
+
+                            <Label Grid.Row="0" Grid.Column="0" Text="Traitement" FontSize="14" TextColor="#b1b1be"  
+                       MinimumWidthRequest="150" VerticalTextAlignment="End"
+                               MaximumWidthRequest="190"  HeightRequest="27"
+                       ></Label>
+                            <Label Grid.Row="1" Grid.Column="0" Text="Teinte" FontSize="14" TextColor="#b1b1be"  
+                       MinimumWidthRequest="150" VerticalTextAlignment="End"
+                               MaximumWidthRequest="190"  HeightRequest="27"
+                       ></Label>
+                            <Label Grid.Row="2" Grid.Column="0" Text="Indice de réfraction" FontSize="14" TextColor="#b1b1be"  
+                       MinimumWidthRequest="150" VerticalTextAlignment="End"
+                               MaximumWidthRequest="190"  HeightRequest="27"
+                       ></Label>
+                            <Label Grid.Row="3" Grid.Column="0" Text="Prix unifier" FontSize="14" TextColor="#b1b1be"  
+                       MinimumWidthRequest="150" VerticalTextAlignment="End"
+                               MaximumWidthRequest="190"  HeightRequest="27"
+                       ></Label>
+
+
+                            <Frame CornerRadius="20" Padding="1" BorderColor="Transparent" 
+                                  
+                                      Background="#4b4747"  Grid.Row="0" Grid.Column="1" MinimumWidthRequest="190"
+                               MaximumWidthRequest="190"  HeightRequest="37">
+                                <Grid>
+
+                                    <Entry Placeholder="Enter text here..."  TextColor="#b1b1be" FontSize="14"
+                                    VerticalTextAlignment="Start" MaximumHeightRequest="10"
+                                   />
+                                    <Picker   x:Name="MyPicker1" Background="#4b4747"
+                                       HorizontalOptions="End" VerticalOptions="Start"
+                                    HeightRequest="5"
+                     WidthRequest="50">
+                                        <Picker.ItemsSource>
+                                            <x:Array Type="{x:Type x:String}">
+                                                <x:String>Option 1</x:String>
+                                                <x:String>Option 2</x:String>
+                                                <x:String>Option 3</x:String>
+                                            </x:Array>
+                                        </Picker.ItemsSource>
+                                    </Picker>
+
+                                </Grid>
+                            </Frame>
+
+
+
+                            <Frame CornerRadius="20" Padding="1" BorderColor="Transparent" 
+                                  
+                                      Background="#4b4747"  Grid.Row="1" Grid.Column="1" MinimumWidthRequest="190"
+                               MaximumWidthRequest="190"  HeightRequest="37">
+                                <Grid>
+                                    
+                                <Entry Placeholder="Enter text here..."  TextColor="#b1b1be" FontSize="14"
+                                    VerticalTextAlignment="Start" MaximumHeightRequest="10"
+                                   />
+                                <Picker   x:Name="MyPicker2" Background="#4b4747"
+                                       HorizontalOptions="End" VerticalOptions="Start"
+                                    HeightRequest="5"
+                     WidthRequest="50">
+                                    <Picker.ItemsSource>
+                                        <x:Array Type="{x:Type x:String}">
+                                            <x:String>Option 1</x:String>
+                                            <x:String>Option 2</x:String>
+                                            <x:String>Option 3</x:String>
+                                        </x:Array>
+                                    </Picker.ItemsSource>
+                                </Picker>
+
+                                </Grid>
+                            </Frame>
+
+
+
+                            <Frame CornerRadius="20" Padding="1" BorderColor="Transparent" 
+                                  
+                                      Background="#4b4747"  Grid.Row="2" Grid.Column="1" MinimumWidthRequest="190"
+                               MaximumWidthRequest="190"  HeightRequest="37">
+                                <Grid>
+
+                                    <Entry Placeholder="Enter text here..."  TextColor="#b1b1be" FontSize="14"
+                                    VerticalTextAlignment="Start" MaximumHeightRequest="10"
+                                   />
+                                    <Picker   x:Name="MyPicker3" Background="#4b4747"
+                                       HorizontalOptions="End" VerticalOptions="Start"
+                                    HeightRequest="5"
+                     WidthRequest="50">
+                                        <Picker.ItemsSource>
+                                            <x:Array Type="{x:Type x:String}">
+                                                <x:String>Option 1</x:String>
+                                                <x:String>Option 2</x:String>
+                                                <x:String>Option 3</x:String>
+                                            </x:Array>
+                                        </Picker.ItemsSource>
+                                    </Picker>
+
+                                </Grid>
+                            </Frame>
+                            <Frame CornerRadius="20" Padding="1" BorderColor="Transparent" 
+                                  
+                                      Background="#4b4747"  Grid.Row="3" Grid.Column="1" MinimumWidthRequest="190"
+                               MaximumWidthRequest="190"  HeightRequest="37">
+                                <Grid>
+
+                                    <Entry Placeholder="Enter text here..."  TextColor="#b1b1be" FontSize="14"
+                                    VerticalTextAlignment="Start" MaximumHeightRequest="10"
+                                   />
+                                    <Picker   x:Name="MyPicker4" Background="#4b4747"
+                                       HorizontalOptions="End" VerticalOptions="Start"
+                                    HeightRequest="5"
+                     WidthRequest="50">
+                                        <Picker.ItemsSource>
+                                            <x:Array Type="{x:Type x:String}">
+                                                <x:String>Option 1</x:String>
+                                                <x:String>Option 2</x:String>
+                                                <x:String>Option 3</x:String>
+                                            </x:Array>
+                                        </Picker.ItemsSource>
+                                    </Picker>
+
+                                </Grid>
+                            </Frame>
+
+
+
+                        </Grid >
+                    </Grid>
+                    
+                </Grid>
+
+
+
+
+                <!---#FF0000! the GRID containing type de verre matrice des prix  + update sub ajout buttons -->
+
+
+
+                <Grid Grid.Row="1" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.7*" />
+                        <ColumnDefinition Width="0.3*" />
+                        
+                    </Grid.ColumnDefinitions>
+                    <!---#FF0000! the the frame containing matrice -->
+                    <Frame Grid.Column="0"  Padding="2"  BorderColor="#ff9000">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.1*" />
+                                <ColumnDefinition Width="0.9*" />
+
+                            </Grid.ColumnDefinitions>
+                            
+                            <Grid Grid.Column="0" Background="#282828">
+                            <Grid.RowDefinitions >
+                                <RowDefinition Height="0.22*" />
+                                <RowDefinition Height="0.78*" />
+                              </Grid.RowDefinitions>
+                                <VerticalStackLayout Grid.Row="1">
+                                <Label Text="G21" TextColor="Black" HeightRequest="50" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="13"/>
+                                    <Label Text="G4" TextColor="Black" HeightRequest="50" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="13"/>
+                                    <Label Text="G6" TextColor="Black" HeightRequest="50" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="13"/>
+                                    <Label Text="G8" TextColor="Black" HeightRequest="50" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="13"/>
+                                    <Label Text="G10" TextColor="Black" HeightRequest="50" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="13"/>
+                                </VerticalStackLayout>
+                            </Grid>
+                            <datagride:DataGrid Grid.Column="1"
+                    
+                    RowHeight="50" HeaderHeight="30" HeaderBackground="#282828" Background="#282828"
+                    SelectionEnabled="False" BorderColor="Transparent" 
+                    ItemsSource="{Binding Teams}" >
+                    <datagride:DataGrid.Columns>
+                        <!---#FF0000! G2 -->
+                        <datagride:DataGridColumn Width="60" PropertyName="G2" Title="G2"  >
+                            
+                            <datagride:DataGridColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Entry Text="{Binding TeamName}" Placeholder="00000" TextColor="White"  />
+                                </DataTemplate>
+                            </datagride:DataGridColumn.CellTemplate>
+                        </datagride:DataGridColumn>
+                        <!---#FF0000! G4 -->
+                        <datagride:DataGridColumn Title="G4" PropertyName="G4" Width="60">
+                            <datagride:DataGridColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Entry Text="{Binding TeamName}" Placeholder="0.00"  TextColor="White" />
+                                </DataTemplate>
+                            </datagride:DataGridColumn.CellTemplate>
+                        </datagride:DataGridColumn>
+                        <!---#FF0000! G6 -->
+                        <datagride:DataGridColumn Title="G6" PropertyName="G6" Width="60">
+                            <datagride:DataGridColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Entry Text="{Binding TeamName}" Placeholder="0.00"  TextColor="White"/>
+                                </DataTemplate>
+                            </datagride:DataGridColumn.CellTemplate>
+                        </datagride:DataGridColumn>
+                        <!---#FF0000! G8 -->
+                        <datagride:DataGridColumn  PropertyName="G8" Title="G8" Width="60">
+                            <datagride:DataGridColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Entry Text="{Binding TeamName}" Placeholder="0.00"  TextColor="White" />
+                                </DataTemplate>
+                            </datagride:DataGridColumn.CellTemplate>
+                        </datagride:DataGridColumn>
+                        <!---#FF0000! G10 -->
+                        <datagride:DataGridColumn Title="G10" PropertyName="G10" Width="60">
+                            <datagride:DataGridColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Entry Text="{Binding TeamName}" Placeholder="0.00"  TextColor="White"/>
+                                </DataTemplate>
+                            </datagride:DataGridColumn.CellTemplate>
+                        </datagride:DataGridColumn>
+                        <!---#FF0000! G12 -->
+                        <datagride:DataGridColumn Title="G12" PropertyName="G12" Width="60">
+                            <datagride:DataGridColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Entry Text="{Binding TeamName}" Placeholder="0.00"  TextColor="White"/>
+                                </DataTemplate>
+                            </datagride:DataGridColumn.CellTemplate>
+                        </datagride:DataGridColumn>
+                        <!---#FF0000! G14 -->
+                        <datagride:DataGridColumn Title="G14" PropertyName="G14" Width="60">
+                            <datagride:DataGridColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Entry Text="{Binding TeamName}" Placeholder="0.00"  TextColor="White"/>
+                                </DataTemplate>
+                            </datagride:DataGridColumn.CellTemplate>
+                        </datagride:DataGridColumn>
+                        <!---#FF0000! G16 -->
+                        <datagride:DataGridColumn Title="G16" PropertyName="G16" Width="60">
+                            <datagride:DataGridColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Entry Text="{Binding TeamName}" Placeholder="0.00"  TextColor="White"/>
+                                </DataTemplate>
+                            </datagride:DataGridColumn.CellTemplate>
+                        </datagride:DataGridColumn>
+                        <!---#FF0000! G18 -->
+                        <datagride:DataGridColumn Title="G18" PropertyName="G18" Width="60">
+                            <datagride:DataGridColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Entry Text="{Binding TeamName}" Placeholder="0.00"  TextColor="White"/>
+                                </DataTemplate>
+                            </datagride:DataGridColumn.CellTemplate>
+                        </datagride:DataGridColumn>
+                        <!---#FF0000! G20 -->
+                        <datagride:DataGridColumn Title="G20" PropertyName="G20" Width="60">
+                            <datagride:DataGridColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Entry Text="{Binding TeamName}" Placeholder="0.00"  TextColor="White"/>
+                                </DataTemplate>
+                            </datagride:DataGridColumn.CellTemplate>
+                        </datagride:DataGridColumn>
+
+
+                    </datagride:DataGrid.Columns>
+                   
+
+
+
+                </datagride:DataGrid   >
+                        
+                        </Grid>
+                </Frame>
+                    <!---#FF0000! the GRID containing buttons -->
+                    <Grid Grid.Column="1" >
+                        <Grid.RowDefinitions >
+                            <RowDefinition Height="0.2*" />
+                            <RowDefinition Height="0.2*" />
+                            <RowDefinition Height="0.2*" />
+                            <RowDefinition Height="0.2*" />
+                            <RowDefinition Height="0.2*" />
+
+                        </Grid.RowDefinitions>
+                        <Button Text="Modifier" Grid.Row="1"
+                                MaximumHeightRequest="30"
+                             MinimumHeightRequest="20" Background="#4b4747" TextColor="White"
+                             MaximumWidthRequest="120"
+                             MinimumWidthRequest="20"/>
+                        <Button Text="Suprimer" Grid.Row="2" 
+                                MaximumHeightRequest="30" Background="#4b4747" TextColor="White"
+                             MinimumHeightRequest="20"
+                             MaximumWidthRequest="120"
+                             MinimumWidthRequest="20"/>
+                        <ImageButton Grid.Row="3" Source="plus.png" 
+                          BackgroundColor="Transparent" 
+                             CornerRadius="20"
+                             Aspect="AspectFit" Padding="0"
+                            MaximumHeightRequest="60"
+                             MinimumHeightRequest="20"
+                             MaximumWidthRequest="60"
+                             MinimumWidthRequest="20"
+                             >
+
+                        </ImageButton>
+
+                    </Grid>
+                </Grid>
+            </Grid>
+
+        </Border>
+    </Frame>
+
+
+   
+
+</mopups:PopupPage>

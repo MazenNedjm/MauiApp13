@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+             x:Class="MauiApp13.pages.vente.ventenew">
+    <Frame BorderColor="#ff9000" CornerRadius="0" Padding="0" WidthRequest="1200" HeightRequest="700"
+          >
+        <Border BackgroundColor="#ff9000"  WidthRequest="1200" HeightRequest="700" HorizontalOptions="Center">
+            <Grid Padding="10" BackgroundColor="#282828"
+                  
+             RowSpacing="1"
+          ColumnSpacing="5"  >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.05*" />
+                    <RowDefinition Height="0.95*" />
+                </Grid.RowDefinitions>
+
+                <!---#FF0000! The button swiching GRID  -->
+
+                <Grid Grid.Row="0"
+                      ColumnSpacing="5"
+                     Margin="1"
+                      Padding="1"
+             RowSpacing="1" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.05*" />
+                        <ColumnDefinition Width="0.19*" />
+                        <ColumnDefinition Width="0.19*" />
+                        <ColumnDefinition Width="0.19*" />
+                        <ColumnDefinition Width="0.19*" />
+                        <ColumnDefinition Width="0.19*" />
+                    </Grid.ColumnDefinitions>
+                    <Button Background="#282828" CornerRadius="10" Padding="1" Text="Correction"  Grid.Column="1"
+                            MinimumHeightRequest="20"
+                            Clicked="oncorrection"
+                         
+                            BorderColor="#ff9000"
+                            BorderWidth="0.7"
+                            >
+                        <Button.Triggers>
+                            <Trigger TargetType="Button" Property="IsFocused" Value="True" >
+                                <Setter Property="Background" Value="#4b4747" ></Setter>
+                            </Trigger>
+
+
+                        </Button.Triggers>
+                    </Button>
+                    <Button Background="#282828" CornerRadius="10" Padding="1" Text="Type de verre"  Grid.Column="2"
+                            MinimumHeightRequest="20" 
+                            BorderColor="#ff9000"
+                            BorderWidth="0.7"
+                            Clicked="onTypedeverre"
+                            >
+                        <Button.Triggers>
+                            <Trigger TargetType="Button" Property="IsFocused" Value="True" >
+                                <Setter Property="Background" Value="#4b4747" ></Setter>
+                            </Trigger>
+
+
+                        </Button.Triggers>
+
+                    </Button>
+                    <Button Background="#282828" CornerRadius="10" Padding="1" Text="Monture"  Grid.Column="3"
+                            MinimumHeightRequest="20" 
+                            BorderColor="#ff9000"
+                            BorderWidth="0.7"
+                            >
+                        <Button.Triggers>
+                            <Trigger TargetType="Button" Property="IsFocused" Value="True" >
+                                <Setter Property="Background" Value="#4b4747" ></Setter>
+                            </Trigger>
+
+
+                        </Button.Triggers>
+                    </Button>
+                    <Button Background="#282828" CornerRadius="10" Padding="1" Text="Autre"  Grid.Column="4"
+                            MinimumHeightRequest="20"
+                            BorderColor="#ff9000"
+                            BorderWidth="0.7"
+                            >
+                        <Button.Triggers>
+                            <Trigger TargetType="Button" Property="IsFocused" Value="True" >
+                                <Setter Property="Background" Value="#4b4747" ></Setter>
+                            </Trigger>
+
+
+                        </Button.Triggers>
+                    </Button>
+                    <Button Background="#282828" CornerRadius="10" Padding="1" Text="Patient"  Grid.Column="5"
+                            MinimumHeightRequest="20" 
+                            BorderColor="#ff9000"
+                            BorderWidth="0.7"
+                            >
+                        <Button.Triggers>
+                            <Trigger TargetType="Button" Property="IsFocused" Value="True" >
+                                <Setter Property="Background" Value="#4b4747" ></Setter>
+                            </Trigger>
+
+
+                        </Button.Triggers>
+                    </Button>
+
+
+                </Grid>
+                <Frame Grid.Row="1" x:Name="ContentFrame"  Padding="1" BackgroundColor="Transparent" >
+
+
+
+                </Frame>
+
+
+
+            </Grid>
+        </Border>
+    </Frame>
+</mopups:PopupPage>

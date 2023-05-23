@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Background="#282828"
+             x:Class="MauiApp13.pages.fourniss.mainpagefournisseurs">
+    
+        <!---#FF0000! the main view -->
+
+        <!---#FF0000! The button swiching GRID  -->
+
+    <!---#FF0000! The centre content GRID  -->
+
+    <Grid Grid.Column="1" Grid.Row="1" BackgroundColor="#282828"
+                  Margin="10"
+             RowSpacing="1"
+          ColumnSpacing="5"  >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.03*" />
+            <RowDefinition Height="0.97*" />
+        </Grid.RowDefinitions>
+
+        <!---#FF0000! The button swiching GRID  -->
+
+        <Grid Grid.Row="0"
+                      ColumnSpacing="5"
+                     Margin="1"
+                      Padding="1"
+             RowSpacing="1" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.05*" />
+                    <ColumnDefinition Width="0.19*" />
+                    <ColumnDefinition Width="0.19*" />
+                    <ColumnDefinition Width="0.19*" />
+                    <ColumnDefinition Width="0.19*" />
+                    <ColumnDefinition Width="0.19*" />
+                </Grid.ColumnDefinitions>
+                <Button Background="#282828" CornerRadius="10" Padding="1" Text="Fournisseur"  Grid.Column="1"
+                            MinimumHeightRequest="20" Clicked="fournisseursclicked"
+                            >
+                    <Button.Triggers>
+                        <Trigger TargetType="Button" Property="IsFocused" Value="True" >
+                            <Setter Property="Background" Value="#4b4747" ></Setter>
+                        </Trigger>
+
+
+                    </Button.Triggers>
+                </Button>
+                <Button Background="#282828" CornerRadius="10" Padding="1" Text="Laboratoires"  Grid.Column="2"
+                            MinimumHeightRequest="20" Clicked="laboratoiresclicked"
+                            
+                            >
+                    <Button.Triggers>
+                        <Trigger TargetType="Button" Property="IsFocused" Value="True" >
+                            <Setter Property="Background" Value="#4b4747" ></Setter>
+                        </Trigger>
+
+
+                    </Button.Triggers>
+
+                </Button>
+                <Button Background="#282828" CornerRadius="10" Padding="1" Text="Distributeurs"  Grid.Column="3"
+                            MinimumHeightRequest="20" Clicked="distributeursclicked"
+                            >
+                    <Button.Triggers>
+                        <Trigger TargetType="Button" Property="IsFocused" Value="True" >
+                            <Setter Property="Background" Value="#4b4747" ></Setter>
+                        </Trigger>
+
+
+                    </Button.Triggers>
+                </Button>
+                <Button Background="#282828" CornerRadius="10" Padding="1" Text="Catalogues"  Grid.Column="4"
+                            MinimumHeightRequest="20" Clicked="cataloguesclicked"
+                            >
+                    <Button.Triggers>
+                        <Trigger TargetType="Button" Property="IsFocused" Value="True" >
+                            <Setter Property="Background" Value="#4b4747" ></Setter>
+                        </Trigger>
+
+
+                    </Button.Triggers>
+                </Button>
+
+            </Grid>
+
+
+            <!---#FF0000! the frame displaying lists of (fournisseurs/laboratoires/distributeurs/catalogues)  -->
+
+           
+
+        </Grid>
+    
+</ContentView>

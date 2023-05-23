@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp13.secondmain"
+             Background="#282828"
+             Title="secondmain">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <RadialGradientBrush x:Key="momo">
+                <GradientStop Color="Black"
+                          Offset="0.1" />
+                <GradientStop Color="#282828"
+                          Offset="1.0" />
+            </RadialGradientBrush>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+
+    <!---#FF0000! the main GRID -->
+    <Grid MinimumHeightRequest="1000" MinimumWidthRequest="1000">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.045*" />
+            <RowDefinition Height="0.955*" />
+        </Grid.RowDefinitions>
+        <!---#FF0000! header GRID -->
+        <Grid BackgroundColor="#4b4747"  Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Source="logoveritable.png" HeightRequest="40" WidthRequest="40" />
+        </Grid>
+
+        <!---#FF0000! the GRID containing the 3 partitions horizontaly -->
+        <Grid 
+        Grid.Row="1"
+         Margin="5"
+          RowSpacing="5"
+          ColumnSpacing="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.05*" />
+                <ColumnDefinition Width="0.8*" />
+                <ColumnDefinition Width="0.15*" />
+            </Grid.ColumnDefinitions>
+
+            <!---#FF0000! The left GRID  -->
+            <Grid Grid.Column="0"
+                  Grid.Row="3" 
+                  RowSpacing="30"
+                   >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.07*" />
+                    <RowDefinition Height="0.93*" />
+
+                </Grid.RowDefinitions>
+                <!---#FF0000! The + GRID  -->
+                <Grid Grid.Row="0" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.5*" />
+                        <RowDefinition Height="0.5*" />
+
+
+                    </Grid.RowDefinitions>
+
+                    <ImageButton Source="plus.png" Grid.Row="1" 
+                          BackgroundColor="Transparent" 
+                                  CornerRadius="10"
+                                  Clicked="Onclicked"
+                             Aspect="AspectFit" Padding="0"
+                            MaximumHeightRequest="50"
+                                
+                             MinimumHeightRequest="10"
+                             MaximumWidthRequest="50"
+                             MinimumWidthRequest="10"
+                             >
+                        <ImageButton.Triggers>
+                            <Trigger TargetType="ImageButton" Property="IsFocused" Value="True" >
+
+                            </Trigger>
+
+
+                        </ImageButton.Triggers>
+                    </ImageButton>
+                </Grid>
+                <!---#FF0000! The icons GRID  -->
+                <Grid Grid.Row="1" 
+                  Margin="10"
+             RowSpacing="1"
+          ColumnSpacing="5"  >
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.05*" />
+                        <RowDefinition Height="0.05*" />
+                        <RowDefinition Height="0.05*" />
+                        <RowDefinition Height="0.05*" />
+                        <RowDefinition Height="0.05*" />
+                        <RowDefinition Height="0.05*" />
+                        <RowDefinition Height="0.05*" />
+                        <RowDefinition Height="0.05*" />
+                        <RowDefinition Height="0.6*" />
+                    </Grid.RowDefinitions>
+                    <BoxView Grid.Row="0" HeightRequest="0.5" Color="#c6c6ce" />
+                    <ImageButton Source="home.png" Grid.Row="1" 
+                          Background="#282828" 
+                             CornerRadius="10"
+                             Aspect="AspectFit" Padding="10"
+                            MaximumHeightRequest="50"
+                             MinimumHeightRequest="10"
+                             MaximumWidthRequest="50"
+                             MinimumWidthRequest="10"
+                             >
+                        <ImageButton.Triggers>
+                            <Trigger TargetType="ImageButton" Property="IsFocused" Value="True" >
+                                <Setter Property="Background" Value="#4b4747" ></Setter>
+                            </Trigger>
+
+
+                        </ImageButton.Triggers>
+                    </ImageButton>
+                    <!---#FF0000! The button for stock  -->
+                    <ImageButton Source="stockl.png" Grid.Row="2" 
+                          Background="#282828"
+                             CornerRadius="10"
+                              Clicked="stockclicked"
+                             Aspect="AspectFit" Padding="10"
+                              MaximumHeightRequest="50"
+                             MinimumHeightRequest="10"
+                             MaximumWidthRequest="50"
+                             MinimumWidthRequest="10"
+                             >
+                        <ImageButton.Triggers>
+                            <Trigger TargetType="ImageButton" Property="IsFocused" Value="True" >
+                                <Setter Property="Background" Value="#4b4747" ></Setter>
+                            </Trigger>
+                        </ImageButton.Triggers>
+
+                    </ImageButton>
+                    <!---#FF0000! The button for fournisseurs  -->
+                    <ImageButton Source="fiurnus.png"  Grid.Row="3" 
+                           Background="#4b4747"
+                             CornerRadius="10"
+                                 Clicked="fournisseursclicked"
+                             ToolTipProperties.Text="fournisseurs"
+                          
+                             Aspect="AspectFit" Padding="10"
+                          MaximumHeightRequest="50"
+                             MinimumHeightRequest="10"
+                             MaximumWidthRequest="50"
+                             MinimumWidthRequest="10"
+                             >
+
+
+                    </ImageButton>
+                    <!---#FF0000! The button for prix -->
+                    <ImageButton Source="bye.png" Grid.Row="4" 
+                          Background="#282828"
+                             CornerRadius="10"
+                                 Clicked="prixclicked"
+                             Aspect="AspectFit" Padding="10"
+                              MaximumHeightRequest="50"
+                             MinimumHeightRequest="10"
+                             MaximumWidthRequest="50"
+                             MinimumWidthRequest="10"
+                             >
+                        <ImageButton.Triggers>
+                            <Trigger TargetType="ImageButton" Property="IsFocused" Value="True" >
+                                <Setter Property="Background" Value="#4b4747" ></Setter>
+                            </Trigger>
+                        </ImageButton.Triggers>
+
+                    </ImageButton>
+                    <!---#FF0000! The button for vente  -->
+                    <ImageButton Source="patiant.png" Grid.Row="5" 
+                          Background="#282828"
+                             CornerRadius="10"
+                              Clicked="venteclicked"
+                             Aspect="AspectFit" Padding="10"
+                              MaximumHeightRequest="50"
+                             MinimumHeightRequest="10"
+                             MaximumWidthRequest="50"
+                             MinimumWidthRequest="10"
+                             >
+                        <ImageButton.Triggers>
+                            <Trigger TargetType="ImageButton" Property="IsFocused" Value="True" >
+                                <Setter Property="Background" Value="#4b4747" ></Setter>
+                            </Trigger>
+                        </ImageButton.Triggers>
+
+                    </ImageButton>
+                    <ImageButton Source="chart.png" Grid.Row="6" 
+                          Background="#282828"
+                             CornerRadius="10"
+                             
+                             Aspect="AspectFit" Padding="10"
+                              MaximumHeightRequest="50"
+                             MinimumHeightRequest="10"
+                             MaximumWidthRequest="50"
+                             MinimumWidthRequest="10"
+                             >
+                        <ImageButton.Triggers>
+                            <Trigger TargetType="ImageButton" Property="IsFocused" Value="True" >
+                                <Setter Property="Background" Value="#4b4747" ></Setter>
+                            </Trigger>
+                        </ImageButton.Triggers>
+
+                    </ImageButton>
+                </Grid>
+            </Grid>
+          
+            <!---#FF0000! The left GRID  -->
+
+           
+            
+
+
+
+
+
+
+
+
+
+
+
+
+            <!---#FF0000! The centre content GRID  -->
+
+            
+               
+
+
+                
+
+
+                <Frame Grid.Row="1" Grid.Column="1" BackgroundColor="#282828" x:Name="myFrame"  Padding="1"
+                       BorderColor="Transparent">
+
+                <!-- Content for the frame goes here by changing the centent of x:Name="myFrame" in backend -->
+                </Frame>
+
+
+                
+
+
+
+            
+
+
+
+            <!---#FF0000! The right GRID  -->
+
+            <Grid Grid.Column="2" Margin="10"
+                 
+             RowSpacing="10"
+          ColumnSpacing="5" >
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.10*"/>
+                    <RowDefinition Height="0.4*"/>
+                    <RowDefinition Height="0.5*"/>
+
+                </Grid.RowDefinitions>
+                <ImageButton Source="mlol.png"
+                     WidthRequest="60"
+                              Clicked="Onclicked"
+                              BackgroundColor="#282828"
+                              HeightRequest="60"
+                              BorderColor="#ff9000"
+                              Grid.Row="0"
+                              BorderWidth="0.7"
+                            
+                              Aspect="AspectFit"
+                              CornerRadius="20"
+                              >
+                    <ImageButton.Shadow>
+                        <Shadow Brush="Black"
+                Offset="3,3"
+                Radius="20"
+                Opacity="2" />
+                    </ImageButton.Shadow>
+                </ImageButton>
+
+
+
+
+                <Frame Grid.Row="1" Padding="10" CornerRadius="30" BackgroundColor="#4b4747" BorderColor="Transparent" >
+                    <Grid 
+             RowSpacing="1"
+                        
+          >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.01*"/>
+                            <RowDefinition Height="0.05*"/>
+                            <RowDefinition Height="0.05*"/>
+                            <RowDefinition Height="0.2*"/>
+                            <RowDefinition Height="0.05*"/>
+                            <RowDefinition Height="0.6*"/>
+
+                        </Grid.RowDefinitions>
+
+                        <Frame CornerRadius="20" Padding="1" BorderColor="Transparent"
+                                      Background="#282828" Grid.Row="1" MinimumWidthRequest="150"
+                               MaximumWidthRequest="190"  HeightRequest="27">
+                            <Entry Placeholder="Enter text here..."  TextColor="#b1b1be" FontSize="12"
+                                    VerticalTextAlignment="Start" MaximumHeightRequest="10"
+                                   />
+                        </Frame>
+                        <Frame CornerRadius="30" Padding="2" BorderColor="Transparent"
+                                      Background="#282828" Grid.Row="5">
+
+                            <ScrollView WidthRequest="170" VerticalScrollBarVisibility="Always" Padding="10">
+                                <VerticalStackLayout >
+                                    <Label Text="-0.5)-0.75 -- NOVADRIVE" TextColor="#b1b1be" FontSize="12"></Label>
+                                    <Label Text="-0.5)-0.75 -- NOVADRIVE" TextColor="#b1b1be" FontSize="12"></Label>
+                                    <Label Text="-0.5)-0.75 -- NOVADRIVE" TextColor="#b1b1be" FontSize="12"></Label>
+                                    <Label Text="-0.5)-0.75 -- NOVADRIVE" TextColor="#b1b1be" FontSize="12"></Label>
+                                    <Label Text="-0.5)-0.75 -- NOVADRIVE" TextColor="#b1b1be" FontSize="12"></Label>
+                                    <Label Text="-0.5)-0.75 -- NOVADRIVE" TextColor="#b1b1be" FontSize="12"></Label>
+                                    <Label Text="-0.5)-0.75 -- NOVADRIVE" TextColor="#b1b1be" FontSize="12"></Label>
+
+                                    <Label Text="-0.5)-0.75 -- NOVADRIVE" TextColor="#b1b1be" FontSize="12"></Label>
+                                    <Label Text="-0.5)-0.75 -- NOVADRIVE" TextColor="#b1b1be" FontSize="12"></Label>
+                                    <Label Text="-0.5)-0.75 -- NOVADRIVE" TextColor="#b1b1be" FontSize="12"></Label>
+                                    <Label Text="-0.5)-0.75 -- NOVADRIVE" TextColor="#b1b1be" FontSize="12"></Label>
+                                    <Label Text="-0.5)-0.75 -- NOVADRIVE" TextColor="#b1b1be" FontSize="12"></Label>
+                                    <Label Text="-0.5)-0.75 -- NOVADRIVE" TextColor="#b1b1be" FontSize="12"></Label>
+                                    <Label Text="-0.5)-0.75 -- NOVADRIVE" TextColor="#b1b1be" FontSize="12"></Label>
+                                    <Label Text="-0.5)-0.75 -- NOVADRIVE" TextColor="#b1b1be" FontSize="12"></Label>
+
+                                    <Label Text="-0.5)-0.75 -- NOVADRIVE" TextColor="#b1b1be" FontSize="12"></Label>
+                                    <Label Text="-0.5)-0.75 -- NOVADRIVE" TextColor="#b1b1be" FontSize="12"></Label>
+                                    <Label Text="-0.5)-0.75 -- NOVADRIVE" TextColor="#b1b1be" FontSize="12"></Label>
+                                    <Label Text="-0.5)-0.75 -- NOVADRIVE" TextColor="#b1b1be" FontSize="12"></Label>
+                                    <Label Text="-0.5)-0.75 -- NOVADRIVE" TextColor="#b1b1be" FontSize="12"></Label>
+                                    <Label Text="-0.5)-0.75 -- NOVADRIVE" TextColor="#b1b1be" FontSize="12"></Label>
+                                    <Label Text="-0.5)-0.75 -- NOVADRIVE" TextColor="#b1b1be" FontSize="12"></Label>
+
+                                </VerticalStackLayout>
+                            </ScrollView>
+                        </Frame>
+
+
+
+                    </Grid>
+                </Frame>
+
+
+            </Grid>
+
+
+        </Grid>
+    </Grid>
+</ContentPage>
