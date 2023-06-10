@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp13.pages.fourniss.exom"
+             Title="exom">
+
+    
+
+
+    <!---#FF0000! the main GRID -->
+    <Grid >
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.045*" />
+            <RowDefinition Height="0.955*" />
+        </Grid.RowDefinitions>
+        <!---#FF0000! header GRID -->
+        <Grid BackgroundColor="#4b4747"  Grid.Row="0" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Source="logoveritable.png" HeightRequest="40" WidthRequest="40" />
+        </Grid>
+
+        <!---#FF0000! the GRID containing the 3 partitions horizontaly -->
+        <Grid 
+        Grid.Row="1" 
+         Margin="5"
+          RowSpacing="5"
+          ColumnSpacing="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.05*" />
+                <ColumnDefinition Width="0.8*" />
+                <ColumnDefinition Width="0.15*" />
+            </Grid.ColumnDefinitions>
+           
+
+            <!---#FF0000! The left GRID  -->
+           
+            <!---#FF0000! The left GRID  -->
+
+   <!---#FF0000! The centre content GRID  -->
+
+
+
+
+            <ContentView  Grid.Column="1" x:Name="myFrame">
+                <!-- Your ViewContent here -->
+            </ContentView>
+
+            <!-- Grid.Column="1" BackgroundColor="#282828" -->
+           
+
+
+
+
+
+
+
+
+
+
+            <!---#FF0000! The right GRID  -->
+
+           
+
+
+        </Grid>
+    </Grid>
+
+</ContentPage>

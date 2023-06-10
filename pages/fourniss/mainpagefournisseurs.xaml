@@ -86,8 +86,14 @@
 
             <!---#FF0000! the frame displaying lists of (fournisseurs/laboratoires/distributeurs/catalogues)  -->
 
-           
+        <Frame Grid.Row="1" BackgroundColor="#282828" x:Name="myFram"  Padding="1"
+                       BorderColor="Transparent">
 
-        </Grid>
+            <!-- Content for the frame goes here by changing the centent of x:Name="myFrame" in backend -->
+        </Frame>
+
+
+
+    </Grid>
     
 </ContentView>

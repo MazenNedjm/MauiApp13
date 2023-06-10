@@ -5,7 +5,10 @@ public partial class mainstock : ContentView
 	public mainstock()
 	{
 		InitializeComponent();
-	}
+         
+  
+
+    }
     public int c = 1;
     public void verresclicked(object sender, EventArgs e)
     {

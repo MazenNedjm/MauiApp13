@@ -9,7 +9,7 @@
 
         <!---#FF0000! The centre content GRID  -->
 
-        <Grid Grid.Column="1" Grid.Row="1" BackgroundColor="#282828"
+        <Grid Grid.Column="1" Grid.Row="1" BackgroundColor="White" MinimumHeightRequest="1000" MinimumWidthRequest="1000"
                   Margin="10"
              RowSpacing="1"
           ColumnSpacing="5"  >
@@ -95,6 +95,7 @@
 
         <VerticalStackLayout Grid.Row="1">
             <!---#FF0000! The centent for lists of(verres/lentilles/montures/Autre)  -->
+           
 
         </VerticalStackLayout>
     </Grid>

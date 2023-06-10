@@ -5,16 +5,18 @@ using System.ComponentModel;
 
 namespace MauiApp13;
 
-public partial class secondmain : ContentPage
+public partial class secondmain : ContentPage 
 {
-    public string Data { get; set; }
+   
     int c = 1;
     int f = 3;
     int s = 3;
-    int p = 2;
+    int p = 1;
     public secondmain()
 	{
-		InitializeComponent();
+        var page1 = new pages.stock.mainstock();
+        myFrame.Content = page1;
+        InitializeComponent();
 	}
     private async void stockclicked(object sender, EventArgs e)
     {

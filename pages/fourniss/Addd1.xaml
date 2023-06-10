@@ -4,24 +4,43 @@
               xmlns:mct="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
              
              x:Class="MauiApp13.pages.fourniss.Addd1">
-
-    <ScrollView>
-        <FlexLayout BindableLayout.ItemsSource="{Binding People}" Wrap="Wrap"
-                    AlignContent="Start"
-                    AlignItems="Start"
+    <Grid  RowDefinitions="5*,95*">
+        
+        
+        
+    <ScrollView Grid.Row="1">
+        <FlexLayout BindableLayout.ItemsSource="{Binding People1}" 
+              Wrap="Wrap"
+                   AlignContent="Center"
+                    AlignItems="Stretch" 
                     
                     >
             <BindableLayout.ItemTemplate>
                 <DataTemplate>
-                    <Frame WidthRequest="200" HeightRequest="200" CornerRadius="20"
-                           Margin="0,10,10,0"
-                           Background="#4b4747" BorderColor="Transparent" >
-                        <Label Text="{Binding Name}" Margin="10"  BackgroundColor="Transparent"
-                           />
-                    </Frame>
-                   
-                </DataTemplate>
+
+
+
+                <Frame WidthRequest="120" HeightRequest="150">
+                    <StackLayout BindableLayout.ItemsSource="{Binding}"  >
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate>
+                                    <!-- Define the template for individual elements -->
+                                            <HorizontalStackLayout>
+                                                <Label Text="{Binding Name}"  />
+                                                <BoxView   WidthRequest="0.5" Color="#c6c6ce" />
+                                                <Label Text="{Binding Age}"  />
+                                                
+                                            </HorizontalStackLayout>
+                                    
+                                    <!-- Add other controls as needed -->
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
+                        </StackLayout>
+                </Frame>
+            </DataTemplate>
             </BindableLayout.ItemTemplate>
         </FlexLayout>
     </ScrollView>
+    </Grid>
+
 </ContentView>

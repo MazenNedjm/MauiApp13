@@ -29,8 +29,8 @@ public partial class MainPage : ContentPage
     }
 	private void Onclicked(object sender, EventArgs e)
 	{
-		
-	}
+        Navigation.PushAsync(new pages.fourniss.exom());
+    }
     
     
 

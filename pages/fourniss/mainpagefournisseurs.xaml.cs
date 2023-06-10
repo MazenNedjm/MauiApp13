@@ -4,7 +4,8 @@ public partial class mainpagefournisseurs : ContentView
 {
 	public mainpagefournisseurs()
 	{
-		InitializeComponent();
+        
+        InitializeComponent();
 	}
     int c = 1;
     public void fournisseursclicked(object sender, EventArgs e)
