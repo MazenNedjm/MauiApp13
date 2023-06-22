@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             
+             x:Class="MauiApp13.pages.vente.monture">
+
+
+    <Grid   ColumnDefinitions="75*,25*">
+        <Grid RowDefinitions="7*,93*">
+            <SearchBar  Grid.Row="0" HorizontalOptions="Center">
+                
+            </SearchBar>
+            <CollectionView x:Name="foj" ItemsUpdatingScrollMode="KeepItemsInView" Grid.Row="1">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="4">
+                        
+                    </GridItemsLayout>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                   
+                    <DataTemplate>
+                        <Grid WidthRequest="150" 
+                           HeightRequest="120" Margin="2">
+                            <Frame CornerRadius="10" 
+                           WidthRequest="150" 
+                           HeightRequest="120"
+                           BorderColor="Transparent"
+                           Background="#4b4747"
+                       />
+                            <Grid RowDefinitions="20*,20*,60*"   RowSpacing="5"
+                              WidthRequest="150" 
+                           HeightRequest="120" Padding="3"
+                           BackgroundColor="Transparent">
+                                <HorizontalStackLayout    Grid.Row="0">
+                                    <Label Text="077AB"  TextColor="White"/>
+                                    <Label Text="17[]45"  TextColor="White"/>
+                                </HorizontalStackLayout>
+
+                                <HorizontalStackLayout    Grid.Row="1">
+                                    <Label Text="Rouge"  TextColor="White"/>
+                                    <Label Text="12"  TextColor="Orange"/>
+                                </HorizontalStackLayout>
+                                <ImageButton Source="mon.png" CornerRadius="10" Grid.Row="2" Aspect="Fill" />
+
+
+                            </Grid>
+
+                        </Grid>
+                    </DataTemplate>
+                    
+                    
+                </CollectionView.ItemTemplate>
+                
+                
+                
+                
+            </CollectionView>
+            
+        </Grid>
+        
+        
+        
+        
+    </Grid>
+</ContentView>

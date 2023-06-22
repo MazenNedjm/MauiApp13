@@ -8,4 +8,7 @@ public partial class exom : ContentPage
         var page1 = new pages.fourniss.Addd1();
         myFrame.Content = page1;
     }
+
+
+
 }

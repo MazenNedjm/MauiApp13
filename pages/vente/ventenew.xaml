@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
              x:Class="MauiApp13.pages.vente.ventenew">
-    <Frame BorderColor="#ff9000" CornerRadius="0" Padding="0" WidthRequest="1200" HeightRequest="700"
+    <Frame BorderColor="#ff9000" CornerRadius="0" Padding="0" WidthRequest="900" HeightRequest="600"
           >
-        <Border BackgroundColor="#ff9000"  WidthRequest="1200" HeightRequest="700" HorizontalOptions="Center">
+        <Border BackgroundColor="#ff9000"  WidthRequest="900" HeightRequest="600" HorizontalOptions="Center">
             <Grid Padding="10" BackgroundColor="#282828"
                   
              RowSpacing="1"
@@ -30,11 +30,11 @@
                         <ColumnDefinition Width="0.19*" />
                         <ColumnDefinition Width="0.19*" />
                     </Grid.ColumnDefinitions>
-                    <Button Background="#282828" CornerRadius="10" Padding="1" Text="Correction"  Grid.Column="1"
+                    <Button Background="#383838" CornerRadius="10" Padding="1" Text="Correction"  Grid.Column="1"
                             MinimumHeightRequest="20"
                             Clicked="oncorrection"
                          
-                            BorderColor="#ff9000"
+                             
                             BorderWidth="0.7"
                             >
                         <Button.Triggers>
@@ -45,55 +45,55 @@
 
                         </Button.Triggers>
                     </Button>
-                    <Button Background="#282828" CornerRadius="10" Padding="1" Text="Type de verre"  Grid.Column="2"
+                    <Button Background="#383838" CornerRadius="10" Padding="1" Text="Type de verre"  Grid.Column="2"
                             MinimumHeightRequest="20" 
-                            BorderColor="#ff9000"
+                             
                             BorderWidth="0.7"
                             Clicked="onTypedeverre"
-                            >
+                            > 
                         <Button.Triggers>
                             <Trigger TargetType="Button" Property="IsFocused" Value="True" >
-                                <Setter Property="Background" Value="#4b4747" ></Setter>
+                                <Setter Property="Background" Value="#282828" ></Setter>
                             </Trigger>
 
 
                         </Button.Triggers>
 
                     </Button>
-                    <Button Background="#282828" CornerRadius="10" Padding="1" Text="Monture"  Grid.Column="3"
+                    <Button Background="#383838" CornerRadius="10" Padding="1" Text="Monture"  Grid.Column="3"
                             MinimumHeightRequest="20" 
-                            BorderColor="#ff9000"
+                             Clicked="onMonture"
                             BorderWidth="0.7"
                             >
                         <Button.Triggers>
                             <Trigger TargetType="Button" Property="IsFocused" Value="True" >
-                                <Setter Property="Background" Value="#4b4747" ></Setter>
+                                <Setter Property="Background" Value="#282828" ></Setter>
                             </Trigger>
 
 
                         </Button.Triggers>
                     </Button>
-                    <Button Background="#282828" CornerRadius="10" Padding="1" Text="Autre"  Grid.Column="4"
+                    <Button Background="#383838" CornerRadius="10" Padding="1" Text="Autre"  Grid.Column="4"
                             MinimumHeightRequest="20"
-                            BorderColor="#ff9000"
+                            Clicked="onAutre"
                             BorderWidth="0.7"
                             >
                         <Button.Triggers>
                             <Trigger TargetType="Button" Property="IsFocused" Value="True" >
-                                <Setter Property="Background" Value="#4b4747" ></Setter>
+                                <Setter Property="Background" Value="#282828" ></Setter>
                             </Trigger>
 
 
                         </Button.Triggers>
                     </Button>
-                    <Button Background="#282828" CornerRadius="10" Padding="1" Text="Patient"  Grid.Column="5"
+                    <Button Background="#383838" CornerRadius="10" Padding="1" Text="Panier"  Grid.Column="5"
                             MinimumHeightRequest="20" 
-                            BorderColor="#ff9000"
+                             Clicked="onPanier"
                             BorderWidth="0.7"
                             >
                         <Button.Triggers>
                             <Trigger TargetType="Button" Property="IsFocused" Value="True" >
-                                <Setter Property="Background" Value="#4b4747" ></Setter>
+                                <Setter Property="Background" Value="#282828" ></Setter>
                             </Trigger>
 
 
@@ -102,11 +102,11 @@
 
 
                 </Grid>
-                <Frame Grid.Row="1" x:Name="ContentFrame"  Padding="1" BackgroundColor="Transparent" >
+                <ContentView Grid.Row="1" x:Name="ContentFrame"  Padding="1" BackgroundColor="Transparent" >
 
 
 
-                </Frame>
+                </ContentView>
 
 
 

@@ -22,7 +22,6 @@ public partial class MainPage : ContentPage
 	private async void OnCounterClicked(object sender, EventArgs e)
 
 	{
-		
 
         await Navigation.PushAsync(new secondmain(),false);
 		
@@ -31,8 +30,20 @@ public partial class MainPage : ContentPage
 	{
         Navigation.PushAsync(new pages.fourniss.exom());
     }
-    
-    
+    private void Onpop(object sender, EventArgs e)
+    {
+        MopupService.Instance.PushAsync(new pages.fourniss.Addl1());
+    }
+    private void Onpop1(object sender, EventArgs e)
+    {
+        MopupService.Instance.PushAsync(new pages.vente.ventenew());
+    }
+    private void Onpop2(object sender, EventArgs e)
+    {
+        MopupService.Instance.PushAsync(new pages.prix.typedeverresajout());
+    }
+
+
 
 }
 

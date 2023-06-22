@@ -4,43 +4,17 @@
               xmlns:mct="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
              
              x:Class="MauiApp13.pages.fourniss.Addd1">
-    <Grid  RowDefinitions="5*,95*">
-        
-        
-        
-    <ScrollView Grid.Row="1">
-        <FlexLayout BindableLayout.ItemsSource="{Binding People1}" 
-              Wrap="Wrap"
-                   AlignContent="Center"
-                    AlignItems="Stretch" 
-                    
-                    >
-            <BindableLayout.ItemTemplate>
-                <DataTemplate>
 
 
-
-                <Frame WidthRequest="120" HeightRequest="150">
-                    <StackLayout BindableLayout.ItemsSource="{Binding}"  >
-                            <BindableLayout.ItemTemplate>
-                                <DataTemplate>
-                                    <!-- Define the template for individual elements -->
-                                            <HorizontalStackLayout>
-                                                <Label Text="{Binding Name}"  />
-                                                <BoxView   WidthRequest="0.5" Color="#c6c6ce" />
-                                                <Label Text="{Binding Age}"  />
-                                                
-                                            </HorizontalStackLayout>
-                                    
-                                    <!-- Add other controls as needed -->
-                                </DataTemplate>
-                            </BindableLayout.ItemTemplate>
-                        </StackLayout>
-                </Frame>
+    <FlexLayout x:Name="personFlexLayout" Direction="Column" JustifyContent="Start">
+        <BindableLayout.ItemTemplate>
+            <DataTemplate>
+                <StackLayout Margin="10" >
+                    <Label Text="{Binding Name}" />
+                    <Label Text="{Binding Age}" />
+                </StackLayout>
             </DataTemplate>
-            </BindableLayout.ItemTemplate>
-        </FlexLayout>
-    </ScrollView>
-    </Grid>
+        </BindableLayout.ItemTemplate>
+    </FlexLayout>
 
 </ContentView>

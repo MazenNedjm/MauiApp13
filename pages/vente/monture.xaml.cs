@@ -1,11 +1,8 @@
-using CommunityToolkit.Maui.Views;
-using Microsoft.Maui.Storage;
-namespace MauiApp13.pages.fourniss;
+namespace MauiApp13.pages.vente;
 
-public partial class Addl1 
+public partial class monture : ContentView
 {
- 
-    public Addl1()
+	public monture()
 	{
 		InitializeComponent();
         var people = new List<Person>
@@ -87,10 +84,9 @@ public partial class Addl1
                 new Person { Name = "BAZIN Salah", Age = 06 ,namber= "Optometriste"  ,dernierecorrection="Nbr d'ordonance :"  },
 
             };
-        BindableLayout.SetItemsSource(myListView, people);
-
+         
+        foj.ItemsSource = people;
     }
-
     public class Person
     {
         public string Name { get; set; }

@@ -44,10 +44,16 @@
 
 
 
-
+            
             <ContentView  Grid.Column="1" x:Name="myFrame">
                 <!-- Your ViewContent here -->
             </ContentView>
+            
+
+
+
+
+
 
             <!-- Grid.Column="1" BackgroundColor="#282828" -->
            

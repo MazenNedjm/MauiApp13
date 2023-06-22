@@ -7,9 +7,9 @@
     <Grid  Background="#282828" Padding="1"  >
 
         <Grid.RowDefinitions >
-            <RowDefinition Height="0.1*" />
+            <RowDefinition Height="0.05*" />
+            <RowDefinition Height="0.45*" />
             <RowDefinition Height="0.5*" />
-            <RowDefinition Height="0.4*" />
 
         </Grid.RowDefinitions>
 
@@ -22,8 +22,8 @@
                 <ColumnDefinition Width="0.05*" />
             </Grid.ColumnDefinitions>
 
-            <Label Grid.Column="1"  Text="Correction des verres" FontSize="19" TextColor="#b1b1be"  
-                       MinimumWidthRequest="150" VerticalTextAlignment="Center"
+            <Label Grid.Column="2"  Text="Correction des verres" FontSize="19" TextColor="#b1b1be"  
+                       MinimumWidthRequest="150" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                                MaximumWidthRequest="300"  HeightRequest="27"
                        ></Label>
             <ImageButton  Grid.Column="4"  Source="clise.png"
@@ -41,43 +41,9 @@
 
 
 
-        <Grid Grid.Row="1" Padding="10">
-
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.05*" />
-                <ColumnDefinition Width="0.4*" />
-                <ColumnDefinition Width="0.1*" />
-                <ColumnDefinition Width="0.4*" />
-                <ColumnDefinition Width="0.05*" />
-
-            </Grid.ColumnDefinitions>
-
-            <Grid Grid.Column="1">
-                <Grid.RowDefinitions>
-
-                    
-                    <RowDefinition Height="0.18*" />
-                    <RowDefinition Height="0.05*" />
-                    <RowDefinition Height="0.13*" />
-                    <RowDefinition Height="0.13*" />
-                    <RowDefinition Height="0.13*" />
-                    <RowDefinition Height="0.13*" />
-                    <RowDefinition Height="0.12*" />
-                    <RowDefinition Height="0.13*" />
-
-                </Grid.RowDefinitions>
-                
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.05*" />
-                    <ColumnDefinition Width="0.3*" />
-                    <ColumnDefinition Width="0.3*" />
-                    <ColumnDefinition Width="0.3*" />
-
-                    <ColumnDefinition Width="0.05*" />
-
-
-
-                </Grid.ColumnDefinitions>
+        <Grid Grid.Row="1" Padding="10" ColumnDefinitions="5*,40*,10*,40*,5*">
+            <Grid Grid.Column="1" RowDefinitions="18*,5*,13*,13*,13*,13*,12*,13*" ColumnDefinitions="5*,30*,30*,30*,5*">
+              
                 <Label Grid.Row="0" Grid.Column="2" Text="Oeil Droit" FontSize="21" TextColor="#b1b1be"  
                        MinimumWidthRequest="150" VerticalTextAlignment="End"
                                MaximumWidthRequest="190"  HeightRequest="27"
@@ -117,7 +83,7 @@
                         <Entry Placeholder="0.00"  TextColor="#b1b1be" FontSize="14"
                                     VerticalTextAlignment="Start" MaximumHeightRequest="10"
                                    />
-                        <Picker   x:Name="MyPicker" Background="#4b4747"
+                        <Picker   x:Name="MyPicker" BackgroundColor="Transparent"
                                        HorizontalOptions="End" VerticalOptions="Start"
                                     HeightRequest="5"
                      WidthRequest="50">
@@ -173,7 +139,7 @@
                         <Entry Placeholder="0.00"  TextColor="#b1b1be" FontSize="14"
                                     VerticalTextAlignment="Start" MaximumHeightRequest="10"
                                    />
-                        <Picker   x:Name="MyPicker1" Background="#4b4747"
+                        <Picker   x:Name="MyPicker1" BackgroundColor="Transparent"
                                        HorizontalOptions="End" VerticalOptions="Start"
                                     HeightRequest="5"
                      WidthRequest="50">
@@ -229,7 +195,7 @@
                         <Entry Placeholder="180°"  TextColor="#b1b1be" FontSize="14"
                                     VerticalTextAlignment="Start" MaximumHeightRequest="10"
                                    />
-                        <Picker   x:Name="MyPicker2" Background="#4b4747"
+                        <Picker   x:Name="MyPicker2" BackgroundColor="Transparent"
                                        HorizontalOptions="End" VerticalOptions="Start"
                                     HeightRequest="5"
                      WidthRequest="50">
@@ -291,7 +257,7 @@
                         <Entry Placeholder="0.00"  TextColor="#b1b1be" FontSize="14"
                                     VerticalTextAlignment="Start" MaximumHeightRequest="10"
                                    />
-                        <Picker   x:Name="MyPicker7" Background="#4b4747"
+                        <Picker   x:Name="MyPicker7" BackgroundColor="Transparent"
                                        HorizontalOptions="End" VerticalOptions="Start"
                                     HeightRequest="5"
                      WidthRequest="50">
@@ -327,7 +293,7 @@
                         <Entry Placeholder="0.00"  TextColor="#b1b1be" FontSize="14"
                                     VerticalTextAlignment="Start" MaximumHeightRequest="10"
                                    />
-                        <Picker   x:Name="MyPicker8" Background="#4b4747"
+                        <Picker   x:Name="MyPicker8" BackgroundColor="Transparent"
                                        HorizontalOptions="End" VerticalOptions="Start"
                                     HeightRequest="5"
                      WidthRequest="50">
@@ -363,7 +329,7 @@
                         <Entry Placeholder="0.00"  TextColor="#b1b1be" FontSize="14"
                                     VerticalTextAlignment="Start" MaximumHeightRequest="10"
                                    />
-                        <Picker   x:Name="MyPicker9" Background="#4b4747"
+                        <Picker   x:Name="MyPicker9" BackgroundColor="Transparent"
                                        HorizontalOptions="End" VerticalOptions="Start"
                                     HeightRequest="5"
                      WidthRequest="50">
@@ -397,58 +363,48 @@
 
 
             </Grid>
-            <Grid Grid.Column="3">
-                <Grid.RowDefinitions>
+            <Grid Grid.Column="3" RowDefinitions="18*,5*,13*,13*,13*,13*,12*,13*" ColumnDefinitions="5*,30*,30*,30*,5*">
 
-                    <RowDefinition Height="0.05*" />
-                    <RowDefinition Height="0.18*" />
-                    <RowDefinition Height="0.05*" />
-                    <RowDefinition Height="0.18*" />
-                    <RowDefinition Height="0.18*" />
-                    <RowDefinition Height="0.05*" />
-                    <RowDefinition Height="0.31*" />
-
-                </Grid.RowDefinitions>
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.05*" />
-                    <ColumnDefinition Width="0.3*" />
-                    <ColumnDefinition Width="0.3*" />
-                    <ColumnDefinition Width="0.3*" />
-
-                    <ColumnDefinition Width="0.05*" />
-
-
-
-                </Grid.ColumnDefinitions>
-                <Label Grid.Row="1" Grid.Column="1" Text="Oeil Gauche" FontSize="17" TextColor="#b1b1be"  
+                <Label Grid.Row="0" Grid.Column="2" Text="Oeil Gauche" FontSize="21" TextColor="#b1b1be"  
                        MinimumWidthRequest="150" VerticalTextAlignment="End"
                                MaximumWidthRequest="190"  HeightRequest="27"
                        ></Label>
-                <Label Grid.Row="3" Grid.Column="1" Text="SPH" FontSize="17" TextColor="#b1b1be"  
+                <Label Grid.Row="2" Grid.Column="1" Text="SPH" FontSize="17" TextColor="#b1b1be"  
                        MinimumWidthRequest="150" VerticalTextAlignment="End"
                                MaximumWidthRequest="190"  HeightRequest="27"
                        ></Label>
-                <Label Grid.Row="3" Grid.Column="2" Text="CYL" FontSize="17" TextColor="#b1b1be"  
+                <Label Grid.Row="2" Grid.Column="2" Text="CYL" FontSize="17" TextColor="#b1b1be"  
                        MinimumWidthRequest="150" VerticalTextAlignment="End"
                                MaximumWidthRequest="190"  HeightRequest="27"
                        ></Label>
-                <Label Grid.Row="3" Grid.Column="3" Text="AXE" FontSize="17" TextColor="#b1b1be"  
+                <Label Grid.Row="2" Grid.Column="3" Text="AXE" FontSize="17" TextColor="#b1b1be"  
                        MinimumWidthRequest="150" VerticalTextAlignment="End"
                                MaximumWidthRequest="190"  HeightRequest="27"
                        ></Label>
-               
+                <Label Grid.Row="4" Grid.Column="2" Text="AXE" FontSize="17" TextColor="#b1b1be"  
+                       MinimumWidthRequest="150" VerticalTextAlignment="End"
+                               MaximumWidthRequest="190"  HeightRequest="27"
+                       ></Label>
+                <Label Grid.Row="4" Grid.Column="1" Text="PRISME" FontSize="17" TextColor="#b1b1be"  
+                       MinimumWidthRequest="150" VerticalTextAlignment="End"
+                               MaximumWidthRequest="190"  HeightRequest="27"
+                       ></Label>
+                <Label Grid.Row="7" Grid.Column="1" Text="ADD" FontSize="17" TextColor="#b1b1be"  
+                       MinimumWidthRequest="150" VerticalTextAlignment="End"
+                               MaximumWidthRequest="190"  HeightRequest="27"
+                       ></Label>
+
 
                 <Frame CornerRadius="20" Padding="0" BorderColor="Transparent" 
                                   HorizontalOptions="Start" 
-                                      Background="#4b4747"  Grid.Row="4" Grid.Column="1" MinimumWidthRequest="100"
+                                      Background="#4b4747"  Grid.Row="3" Grid.Column="1" MinimumWidthRequest="100"
                                MaximumWidthRequest="120"  HeightRequest="37">
                     <Grid>
 
                         <Entry Placeholder="0.00"  TextColor="#b1b1be" FontSize="14"
                                     VerticalTextAlignment="Start" MaximumHeightRequest="10"
                                    />
-                        <Picker   x:Name="MyPicker3" Background="#4b4747"
+                        <Picker   x:Name="MyPickera" BackgroundColor="Transparent"
                                        HorizontalOptions="End" VerticalOptions="Start"
                                     HeightRequest="5"
                      WidthRequest="50">
@@ -497,14 +453,14 @@
                 </Frame>
                 <Frame CornerRadius="20" Padding="0" BorderColor="Transparent" 
                                   HorizontalOptions="Start" 
-                                      Background="#4b4747"  Grid.Row="4" Grid.Column="2" MinimumWidthRequest="100"
+                                      Background="#4b4747"  Grid.Row="3" Grid.Column="2" MinimumWidthRequest="100"
                                MaximumWidthRequest="120"  HeightRequest="37">
                     <Grid>
 
                         <Entry Placeholder="0.00"  TextColor="#b1b1be" FontSize="14"
                                     VerticalTextAlignment="Start" MaximumHeightRequest="10"
                                    />
-                        <Picker   x:Name="MyPicker4" Background="#4b4747"
+                        <Picker   x:Name="MyPicker1a" BackgroundColor="Transparent"
                                        HorizontalOptions="End" VerticalOptions="Start"
                                     HeightRequest="5"
                      WidthRequest="50">
@@ -553,14 +509,14 @@
                 </Frame>
                 <Frame CornerRadius="20" Padding="0" BorderColor="Transparent" 
                                   HorizontalOptions="Start" 
-                                      Background="#4b4747"  Grid.Row="4" Grid.Column="3" MinimumWidthRequest="100"
+                                      Background="#4b4747"  Grid.Row="3" Grid.Column="3" MinimumWidthRequest="100"
                                MaximumWidthRequest="120"  HeightRequest="37">
                     <Grid>
 
                         <Entry Placeholder="180°"  TextColor="#b1b1be" FontSize="14"
                                     VerticalTextAlignment="Start" MaximumHeightRequest="10"
                                    />
-                        <Picker   x:Name="MyPicker5" Background="#4b4747"
+                        <Picker   x:Name="MyPicker2a" BackgroundColor="Transparent"
                                        HorizontalOptions="End" VerticalOptions="Start"
                                     HeightRequest="5"
                      WidthRequest="50">
@@ -613,12 +569,122 @@
 
                     </Grid>
                 </Frame>
+                <Frame CornerRadius="20" Padding="0" BorderColor="Transparent" 
+                                  HorizontalOptions="Start" 
+                                      Background="#4b4747"  Grid.Row="7" Grid.Column="2" MinimumWidthRequest="100"
+                               MaximumWidthRequest="120"  HeightRequest="37">
+                    <Grid>
+
+                        <Entry Placeholder="0.00"  TextColor="#b1b1be" FontSize="14"
+                                    VerticalTextAlignment="Start" MaximumHeightRequest="10"
+                                   />
+                        <Picker   x:Name="MyPicker7a" BackgroundColor="Transparent"
+                                       HorizontalOptions="End" VerticalOptions="Start"
+                                    HeightRequest="5"
+                     WidthRequest="50">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>+10.00</x:String>
+                                    <x:String>+9.00</x:String>
+                                    <x:String>+8.00</x:String>
+                                    <x:String>+7.00</x:String>
+                                    <x:String>+6.00</x:String>
+                                    <x:String>+5.00</x:String>
+                                    <x:String>+4.00</x:String>
+                                    <x:String>+3.00</x:String>
+                                    <x:String>+2.00</x:String>
+                                    <x:String>+1.00</x:String>
+
+
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                        <Frame BorderColor="Transparent" BackgroundColor="Transparent" WidthRequest="20">
+
+                        </Frame>
+
+                    </Grid>
+                </Frame>
+                <Frame CornerRadius="20" Padding="0" BorderColor="Transparent" 
+                                  HorizontalOptions="Start" 
+                                      Background="#4b4747"  Grid.Row="5" Grid.Column="1" MinimumWidthRequest="100"
+                               MaximumWidthRequest="120"  HeightRequest="37">
+                    <Grid>
+
+                        <Entry Placeholder="0.00"  TextColor="#b1b1be" FontSize="14"
+                                    VerticalTextAlignment="Start" MaximumHeightRequest="10"
+                                   />
+                        <Picker   x:Name="MyPicker8a" BackgroundColor="Transparent"
+                                       HorizontalOptions="End" VerticalOptions="Start"
+                                    HeightRequest="5"
+                     WidthRequest="50">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>+10.00</x:String>
+                                    <x:String>+9.00</x:String>
+                                    <x:String>+8.00</x:String>
+                                    <x:String>+7.00</x:String>
+                                    <x:String>+6.00</x:String>
+                                    <x:String>+5.00</x:String>
+                                    <x:String>+4.00</x:String>
+                                    <x:String>+3.00</x:String>
+                                    <x:String>+2.00</x:String>
+                                    <x:String>+1.00</x:String>
+
+
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                        <Frame BorderColor="Transparent" BackgroundColor="Transparent" WidthRequest="20">
+
+                        </Frame>
+
+                    </Grid>
+                </Frame>
+                <Frame CornerRadius="20" Padding="0" BorderColor="Transparent" 
+                                  HorizontalOptions="Start" 
+                                      Background="#4b4747"  Grid.Row="5" Grid.Column="2" MinimumWidthRequest="100"
+                               MaximumWidthRequest="120"  HeightRequest="37">
+                    <Grid>
+
+                        <Entry Placeholder="0.00"  TextColor="#b1b1be" FontSize="14"
+                                    VerticalTextAlignment="Start" MaximumHeightRequest="10"
+                                   />
+                        <Picker   x:Name="MyPicker9a" BackgroundColor="Transparent"
+                                       HorizontalOptions="End" VerticalOptions="Start"
+                                    HeightRequest="5"
+                     WidthRequest="50">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>+10.00</x:String>
+                                    <x:String>+9.00</x:String>
+                                    <x:String>+8.00</x:String>
+                                    <x:String>+7.00</x:String>
+                                    <x:String>+6.00</x:String>
+                                    <x:String>+5.00</x:String>
+                                    <x:String>+4.00</x:String>
+                                    <x:String>+3.00</x:String>
+                                    <x:String>+2.00</x:String>
+                                    <x:String>+1.00</x:String>
+
+
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                        <Frame BorderColor="Transparent" BackgroundColor="Transparent" WidthRequest="20">
+
+                        </Frame>
+
+                    </Grid>
+                </Frame>
+
 
 
 
 
 
             </Grid>
+
 
         </Grid>
 

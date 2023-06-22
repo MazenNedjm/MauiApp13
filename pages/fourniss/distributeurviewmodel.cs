@@ -19,15 +19,29 @@ namespace MauiApp13.pages.fourniss
     }
     public class distributeurviewmodel :  INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropretyChanges;
+        
+        private bool isloading;
+
         public event PropertyChangedEventHandler PropertyChanged;
+
+        public bool Isloading
+        {
+            get { return isloading; }
+            set
+            {
+                isloading = value;
+                OnPropertyChanged(nameof(Isloading));
+            }
+        }
 
         public distributeurviewmodel()
         {
+            Isloading = true;
             LoadData();
+            Isloading = false;
 
         }
-        public ObservableCollection<String> Items { get; set; } = new ObservableCollection<String>();
+        
         public ObservableCollection<Person> People { get; set; } = new ObservableCollection<Person>();
         public ObservableCollection<ObservableCollection<Person>> People1 { get; set; } = new ObservableCollection<ObservableCollection<Person>>();
         
@@ -307,25 +321,9 @@ namespace MauiApp13.pages.fourniss
             }
         }
 
-
-        private string name;
-        public string Name
-        {
-            get => name;
-            set
-            {
-                if (name == value)
-                    return;
-                name = value;
-                RaisPropretyChanged();
-            }
-        }
-
-        private void RaisPropretyChanged([CallerMemberName] string propertyName = null)
+        protected virtual void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
-        
     }
 }

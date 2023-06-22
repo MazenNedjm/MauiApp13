@@ -49,6 +49,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\gp.jpg" />
+	  <None Remove="Resources\Images\iconp.svg" />
+	  <None Remove="Resources\Images\mon.svg" />
+	  <None Remove="Resources\Images\novatis.jpg" />
+	  <None Remove="Resources\Images\zzz.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="akgul.Maui.DataGrid" Version="2.0.0" />
 		<PackageReference Include="CommunityToolkit.Maui" Version="5.1.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
@@ -126,10 +134,19 @@
 	  <MauiXaml Update="pages\vendeurs\nouveauvendeur.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="pages\vente\autre.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="pages\vente\correction.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="pages\vente\mainvente.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="pages\vente\monture.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="pages\vente\panier.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="pages\vente\Typedeverre.xaml">

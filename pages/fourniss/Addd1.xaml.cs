@@ -7,19 +7,38 @@ namespace MauiApp13.pages.fourniss;
 public partial class Addd1 : ContentView
 
 {
- 
-  
 
-   
 
-    public Addd1()
+    public class Person
     {
-        BindingContext = new distributeurviewmodel();
-        InitializeComponent();
+        public string Name { get; set; }
+        public int namber { get; set; }
+        public int  Age { get; set; }
+        public string dernierecorrection { get; set; }
+       
         
-     
 
 
     }
+
+
     
+
+    public Addd1()
+    {
+        
+        InitializeComponent();
+
+        var people = new List<Person>
+        {
+            new Person { Name = "John Doe", Age = 30 },
+           
+        };
+
+        BindableLayout.SetItemsSource(personFlexLayout, people);
+    }
+    
+    
+
+
 }

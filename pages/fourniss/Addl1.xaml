@@ -1,194 +1,680 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<mct:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<mopups:PopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               xmlns:mct="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
-              Size="900,600"
-           
-           CanBeDismissedByTappingOutsideOfPopup="False"
+           xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+       
              x:Class="MauiApp13.pages.fourniss.Addl1">
+
+<!--
+     <Grid RowDefinitions="5*,95*" ColumnDefinitions="10*,70*,20*" WidthRequest="1000" HeightRequest="800">
+        <ListView x:Name="myListView" VerticalScrollBarVisibility="Always" Background="#282828" Grid.Column="1" Grid.Row="1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid ColumnDefinitions="10*,20*,5*,15*,35*,10*,5*"  HeightRequest="60" Background="#4b4747" Margin="10" >
+                            <Image Grid.Column="0" Source="iconp.png" MinimumHeightRequest="40" MinimumWidthRequest="40" MaximumHeightRequest="50" MaximumWidthRequest="50" />
+                            <Label Grid.Column="1" Text="{Binding Name} " TextColor="White" VerticalOptions="Center" FontSize="16" HorizontalOptions="Start"/>
+                            <Label Grid.Column="2" Text="{Binding Age}" TextColor="White" VerticalOptions="Center" FontSize="14" HorizontalOptions="Center"/>
+                            <Label Grid.Column="3" Text="{Binding namber} " TextColor="White" VerticalOptions="Center" FontSize="14" HorizontalOptions="Center"/>
+                            <Label Grid.Column="4" Text="{Binding dernierecorrection} " TextColor="White" VerticalOptions="Center" FontSize="14" HorizontalOptions="Center"/>
+                            <Button Grid.Column="5" Text="Action"  BackgroundColor="Orange"  MinimumHeightRequest="30" MinimumWidthRequest="70" MaximumHeightRequest="40" MaximumWidthRequest="80" />
+                            <Button Grid.Column="6" Text="+"  BackgroundColor="Orange"  MinimumHeightRequest="30" MinimumWidthRequest="30" MaximumHeightRequest="40" MaximumWidthRequest="40" FontSize="19"/>
+
+                            <Grid.Triggers>
+                                <Trigger TargetType="Grid" Property="IsFocused" Value="True" >
+                                    <Setter Property="Background" Value="#4b47" ></Setter>
+                                </Trigger>
+                            </Grid.Triggers>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+    -->
     
-    <Frame BorderColor="#ff9000" CornerRadius="0" Padding="0" >
-        <Grid Padding="10" Background="#282828"  >
+    <!--  /////////  the patient listview  //////////   -->
+    
+    
+    <!-- <Grid RowDefinitions="5*,95*" ColumnDefinitions="10*,70*,20*" WidthRequest="1000" HeightRequest="800">
+        <ListView x:Name="myListView" VerticalScrollBarVisibility="Always" Background="#282828" Grid.Column="1" Grid.Row="1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid ColumnDefinitions="15*,15*,15*,20*,35*"  HeightRequest="60" Background="#4b4747" Margin="10" >
+                            <Image Grid.Column="0" Source="iconp.png" MinimumHeightRequest="40" MinimumWidthRequest="40" MaximumHeightRequest="50" MaximumWidthRequest="50" />
+                            <Label Grid.Column="1" Text="{Binding Name} " TextColor="White" VerticalOptions="Center" FontSize="16" HorizontalOptions="Center"/>
+                            <Label Grid.Column="3" Text="{Binding Age} " TextColor="White" VerticalOptions="Center" FontSize="14" HorizontalOptions="Center"/>
+                            <Label Grid.Column="2" Text="{Binding namber} " TextColor="White" VerticalOptions="Center" FontSize="14" HorizontalOptions="Center"/>
+                             <Button Grid.Column="4" Text="Afficher"  BackgroundColor="Orange"  MinimumHeightRequest="30" MinimumWidthRequest="70" MaximumHeightRequest="40" MaximumWidthRequest="80" />
+                            <Grid.Triggers>
+                                <Trigger TargetType="Grid" Property="IsFocused" Value="True" >
+                                    <Setter Property="Background" Value="#4b47" ></Setter>
+                                </Trigger>
+                            </Grid.Triggers>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid> 
+    -->
 
-            <Grid.RowDefinitions >
-                <RowDefinition Height="0.1*" />
-                <RowDefinition Height="0.9*" />
 
-            </Grid.RowDefinitions>
-            <Grid Grid.Row="0" >
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.3*" />
-                    <ColumnDefinition Width="0.3*" />
-                    <ColumnDefinition Width="0.2*" />
-                    <ColumnDefinition Width="0.05*" />
-                    <ColumnDefinition Width="0.05*" />
-                </Grid.ColumnDefinitions>
+    <!--  /////////  the medcins listview  //////////   -->
 
-                <Label Grid.Row="1"  Text="Nouveau Laboratoire" FontSize="19" TextColor="#b1b1be"  
-                       MinimumWidthRequest="150" VerticalTextAlignment="Center"
-                               MaximumWidthRequest="190"  HeightRequest="27"
-                       ></Label>
-                <ImageButton  Grid.Column="4" Clicked="Button_Clicked" Source="clise.png"
-                               Aspect="AspectFit" Padding="0"
-                            MaximumHeightRequest="10"
+
+    <!--    
+     <Grid RowDefinitions="5*,95*" ColumnDefinitions="10*,70*,20*" WidthRequest="1500" HeightRequest="800">
+        <ListView x:Name="myListView" VerticalScrollBarVisibility="Always" Background="#282828" Grid.Column="1" Grid.Row="1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid ColumnDefinitions="10*,80*,10*"  HeightRequest="80" Background="#4b4747" Margin="10" >
+                            <Image Grid.Column="0" Source="iconp.png" MinimumHeightRequest="40" MinimumWidthRequest="40" MaximumHeightRequest="50" MaximumWidthRequest="50" />
+                            <Grid RowDefinitions="50*,50*" ColumnDefinitions="50*,50*"   Margin="3" Grid.Column="1" >
+                           
+                                <Label Grid.Column="0" Grid.Row="0" Text="{Binding Name} " TextColor="White" VerticalOptions="Center" FontSize="16" HorizontalOptions="Start" Padding="5,0,0,0"/>
+                                <Grid Grid.Column="0" Grid.Row="1"  ColumnDefinitions="45*,5*,5*,5*,5*,5*,5*,19*"  >
+                                    <Label Grid.Column="0"  Text="{Binding namber} " TextColor="White" VerticalOptions="Center" FontSize="14" HorizontalOptions="Center"/>
+
+                                    <Path Stroke="Black" Fill="#FFD700" StrokeThickness="0" Grid.Column="2">
+                                        <Path.Data>
+                                            <PathGeometry>
+                                                <PathFigure StartPoint="6.25,0">
+                                                    <LineSegment Point="11.25,15" />
+                                                    <LineSegment Point="0,5.625" />
+                                                    <LineSegment Point="12.5,5.625" />
+                                                    <LineSegment Point="1.25,15" />
+                                                    <LineSegment Point="6.25,0" />
+                                                </PathFigure>
+                                            </PathGeometry>
+                                        </Path.Data>
+                                    </Path>
+                                    <Path Stroke="Black" Fill="#FFD700" StrokeThickness="0" Grid.Column="3">
+                                        <Path.Data>
+                                            <PathGeometry>
+                                                <PathFigure StartPoint="6.25,0">
+                                                    <LineSegment Point="11.25,15" />
+                                                    <LineSegment Point="0,5.625" />
+                                                    <LineSegment Point="12.5,5.625" />
+                                                    <LineSegment Point="1.25,15" />
+                                                    <LineSegment Point="6.25,0" />
+                                                </PathFigure>
+                                            </PathGeometry>
+                                        </Path.Data>
+                                    </Path>
+                                    <Path Stroke="Black" Fill="#FFD700" StrokeThickness="0" Grid.Column="4">
+                                        <Path.Data>
+                                            <PathGeometry>
+                                                <PathFigure StartPoint="6.25,0">
+                                                    <LineSegment Point="11.25,15" />
+                                                    <LineSegment Point="0,5.625" />
+                                                    <LineSegment Point="12.5,5.625" />
+                                                    <LineSegment Point="1.25,15" />
+                                                    <LineSegment Point="6.25,0" />
+                                                </PathFigure>
+                                            </PathGeometry>
+                                        </Path.Data>
+                                    </Path>
+                                    <Path Stroke="Black" Fill="#FFD700" StrokeThickness="0" Grid.Column="5">
+                                        <Path.Data>
+                                            <PathGeometry>
+                                                <PathFigure StartPoint="6.25,0">
+                                                    <LineSegment Point="11.25,15" />
+                                                    <LineSegment Point="0,5.625" />
+                                                    <LineSegment Point="12.5,5.625" />
+                                                    <LineSegment Point="1.25,15" />
+                                                    <LineSegment Point="6.25,0" />
+                                                </PathFigure>
+                                            </PathGeometry>
+                                        </Path.Data>
+                                    </Path>
+                                    <Path Stroke="Black" Fill="#FFD700" StrokeThickness="0" Grid.Column="6">
+                                        <Path.Data>
+                                            <PathGeometry>
+                                                <PathFigure StartPoint="6.25,0">
+                                                    <LineSegment Point="11.25,15" />
+                                                    <LineSegment Point="0,5.625" />
+                                                    <LineSegment Point="12.5,5.625" />
+                                                    <LineSegment Point="1.25,15" />
+                                                    <LineSegment Point="6.25,0" />
+                                                </PathFigure>
+                                            </PathGeometry>
+                                        </Path.Data>
+                                    </Path>
+                                </Grid>
+
+                                <Label Grid.Column="1" Grid.Row="0"  Text="{Binding dernierecorrection} " TextColor="White" VerticalOptions="Center" FontSize="14" HorizontalOptions="Center"/>
+                                <Label Grid.Column="1" Grid.Row="1" Text="{Binding Age} " TextColor="White" VerticalOptions="Center" FontSize="14" HorizontalOptions="Center"/>
+                                </Grid>
+                            <Button Grid.Column="2" Text="Action"  BackgroundColor="Orange"  MinimumHeightRequest="30" MinimumWidthRequest="70" MaximumHeightRequest="40" MaximumWidthRequest="80" />
+
+                            <Grid.Triggers>
+                                <Trigger TargetType="Grid" Property="IsFocused" Value="True" >
+                                    <Setter Property="Background" Value="#4b47" ></Setter>
+                                </Trigger>
+                            </Grid.Triggers>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+         
+
+    </Grid>
+
+    -->
+
+
+
+    <!--  /////////  the ventes listview  //////////   -->
+
+
+
+
+
+    <!--  <Grid RowDefinitions="5*,95*" ColumnDefinitions="10*,70*,20*" WidthRequest="1000" HeightRequest="800">
+        <ListView x:Name="myListView" VerticalScrollBarVisibility="Always" Background="#282828" Grid.Column="1" Grid.Row="1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid ColumnDefinitions="15*,65*,10*,10*"  HeightRequest="60" Background="#4b4747" Margin="10" >
+                             <Label Grid.Column="0" Text="{Binding Name} " TextColor="White" VerticalOptions="Center" FontSize="16" HorizontalOptions="Start"/>
+                            <Label Grid.Column="1" Text="{Binding dernierecorrection} " TextColor="White" VerticalOptions="Center" FontSize="14" HorizontalOptions="Center"/>
+                            <Button Grid.Column="2" Text="Action"  BackgroundColor="Orange"  MinimumHeightRequest="30" MinimumWidthRequest="70" MaximumHeightRequest="40" MaximumWidthRequest="80" />
+                            <Button Grid.Column="3" Text="+"  BackgroundColor="Orange"  MinimumHeightRequest="30" MinimumWidthRequest="30" MaximumHeightRequest="40" MaximumWidthRequest="40" FontSize="19"/>
+
+                            <Grid.Triggers>
+                                <Trigger TargetType="Grid" Property="IsFocused" Value="True" >
+                                    <Setter Property="Background" Value="#4b47" ></Setter>
+                                </Trigger>
+                            </Grid.Triggers>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+     -->
+
+
+
+    <!--  /////////  the commandes listview  //////////   -->
+    
+    
+    
+
+   <!--  
+    
+     <Grid RowDefinitions="5*,95*" ColumnDefinitions="10*,70*,20*" WidthRequest="1000" HeightRequest="800">
+        <ListView x:Name="myListView" VerticalScrollBarVisibility="Always" Background="#282828" Grid.Column="1" Grid.Row="1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid ColumnDefinitions="15*,55*,10*,10*,10*"  HeightRequest="60" Background="#4b4747" Margin="10" >
+                            <Label Grid.Column="0" Text="{Binding Name} " TextColor="White" VerticalOptions="Center" FontSize="16" HorizontalOptions="Start"/>
+                            <Label Grid.Column="1" Text="{Binding dernierecorrection} " TextColor="White" VerticalOptions="Center" FontSize="14" HorizontalOptions="Center"/>
+                             
+                                <Ellipse WidthRequest="15" HeightRequest="15"  Fill="#FFA500"   Opacity="80" Grid.Column="2"/>
+                               
+                            <Button Grid.Column="3" Text="Action"  BackgroundColor="Orange"  MinimumHeightRequest="30" MinimumWidthRequest="70" MaximumHeightRequest="40" MaximumWidthRequest="80" />
+                            <Button Grid.Column="4" Text="Action"  BackgroundColor="Orange"  MinimumHeightRequest="30" MinimumWidthRequest="70" MaximumHeightRequest="40" MaximumWidthRequest="80" />
+
+                            <Grid.Triggers>
+                                <Trigger TargetType="Grid" Property="IsFocused" Value="True" >
+                                    <Setter Property="Background" Value="#4b47" ></Setter>
+                                </Trigger>
+                            </Grid.Triggers>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+    
+    -->
+
+
+    <!--  /////////  the credits  listview  //////////   -->
+    
+    
+    
+    <!--   
+    
+    
+    
+    <Grid RowDefinitions="5*,95*" ColumnDefinitions="10*,70*,20*" WidthRequest="1500" HeightRequest="800">
+        <ListView x:Name="myListView" VerticalScrollBarVisibility="Always" Background="#282828" Grid.Column="1" Grid.Row="1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid ColumnDefinitions="90*,10*"  HeightRequest="80" Background="#4b4747" Margin="10" >
+                              <Grid RowDefinitions="50*,50*" ColumnDefinitions="20*,80*"   Margin="3" Grid.Column="0" >
+                                <Label Grid.Column="0" Grid.Row="1" Text="{Binding namber} " TextColor="White" VerticalOptions="Center" FontSize="14" HorizontalOptions="Center"/>
+                                <Label Grid.Column="0" Grid.Row="0" Text="{Binding Name} " TextColor="White" VerticalOptions="Center" FontSize="16" HorizontalOptions="Start" Padding="5,0,0,0"/>
+                                <Label Grid.Column="1" Grid.Row="0"  Text="{Binding dernierecorrection} " TextColor="White" VerticalOptions="Center" FontSize="14" HorizontalOptions="Center"/>
+
+                                <Grid Grid.Column="1" Grid.Row="1"  ColumnDefinitions="5*,45*,5*,50*"  >
+                                    <Label Grid.Column="0"  Text="V:" TextColor="White" VerticalOptions="Center" FontSize="16" HorizontalOptions="Center"/>
+                                    <Label Grid.Column="1"  Text="{Binding namber} " TextColor="White" VerticalOptions="Center" FontSize="14" HorizontalOptions="Center"/>
+                                    <Label Grid.Column="2"  Text="R:" TextColor="White" VerticalOptions="Center" FontSize="16" HorizontalOptions="Center"/>
+                                    <Label Grid.Column="3"  Text="{Binding namber} " TextColor="White" VerticalOptions="Center" FontSize="14" HorizontalOptions="Center"/>
+                                </Grid>
+                              </Grid>
+                            <HorizontalStackLayout Spacing="10"  Grid.Column="1">
+                                <Button   Text="A"  BackgroundColor="Orange" FontSize="19" MinimumHeightRequest="30" MinimumWidthRequest="30" MaximumHeightRequest="40" MaximumWidthRequest="40" />
+                                <Button   Text="+"  BackgroundColor="Orange" FontSize="19"  MinimumHeightRequest="30" MinimumWidthRequest="30" MaximumHeightRequest="40" MaximumWidthRequest="40" />
+
+                            </HorizontalStackLayout>
+                            
+                            <Grid.Triggers>
+                                <Trigger TargetType="Grid" Property="IsFocused" Value="True" >
+                                    <Setter Property="Background" Value="#4b47" ></Setter>
+                                </Trigger>
+                            </Grid.Triggers>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+    </Grid>
+
+    -->
+
+
+    <!--  /////////  the factures  listview  //////////   -->
+    
+    
+    
+    <!--
+    
+    <Grid RowDefinitions="5*,95*" ColumnDefinitions="10*,70*,20*" WidthRequest="1000" HeightRequest="800">
+        <ListView x:Name="myListView" VerticalScrollBarVisibility="Always" Background="#282828" Grid.Column="1" Grid.Row="1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid ColumnDefinitions="5*,10*,10*,10*,44*,10*,10*"  HeightRequest="60" Background="#4b4747" Margin="10" >
+
+                            <Label Grid.Column="1" Text="N:" TextColor="White" VerticalOptions="Center" FontSize="14" HorizontalOptions="Center"/> 
+                            <Label Grid.Column="2" Text="{Binding namber} " TextColor="White" VerticalOptions="Center" FontSize="14" HorizontalOptions="Center"/>
+                            <Label Grid.Column="3" Text="{Binding Name} " TextColor="White" VerticalOptions="Center" FontSize="16" HorizontalOptions="Start"/>
+                            <Label Grid.Column="4" Text="{Binding dernierecorrection} " TextColor="White" VerticalOptions="Center" FontSize="14" HorizontalOptions="Center"/>
+                            <Label Grid.Column="5" Text="12/06/2023" TextColor="White" VerticalOptions="Center" FontSize="14" HorizontalOptions="Center"/>
+
+                            <Button Grid.Column="6" Text="A"  BackgroundColor="Orange" FontSize="19" MinimumHeightRequest="30" MinimumWidthRequest="70" MaximumHeightRequest="40" MaximumWidthRequest="80" />
+                             
+                            <Grid.Triggers>
+                                <Trigger TargetType="Grid" Property="IsFocused" Value="True" >
+                                    <Setter Property="Background" Value="#4b47" ></Setter>
+                                </Trigger>
+                            </Grid.Triggers>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+
+    -->
+
+    <!--  /////////  the liste des vendeurs  listview  //////////   -->
+
+    <!--       
+    
+    <Grid RowDefinitions="5*,95*" ColumnDefinitions="10*,70*,20*" WidthRequest="1500" HeightRequest="800">
+        <ListView x:Name="myListView" VerticalScrollBarVisibility="Always" Background="#282828" Grid.Column="1" Grid.Row="1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                      <Grid RowDefinitions="70*,30* " HeightRequest="220" Background="#4b4747" Margin="10" >
+                        <Grid ColumnDefinitions="20*,60*,20*"  Grid.Row="0">
+                            <Image Grid.Column="0" Source="iconp.png" MinimumHeightRequest="100" MinimumWidthRequest="100" MaximumHeightRequest="120" MaximumWidthRequest="120" />
+                            <Grid RowDefinitions="10*,30*,30*,30*"   Margin="3" Grid.Column="1" >
+
+                                    <Label Grid.Row="1"   Text="{Binding Name} " TextColor="White" VerticalOptions="Center" FontSize="16" HorizontalOptions="Start" Padding="5,0,0,0"/>
+                                    <Label Grid.Row="2"  Text="0565930112" TextColor="White" VerticalOptions="Center" FontSize="14" HorizontalOptions="Center"/>
+                                    <Label Grid.Row="3"  Text=" rontpoint 94 ibn badis" TextColor="White" VerticalOptions="Center" FontSize="14" HorizontalOptions="Center"/>
+
+                            </Grid>
+                                <Grid Grid.Column="2" Margin="3" RowDefinitions="10*,40*,40*,10*"    >
+                                    <Label Grid.Row="1"  Text="salaire du mois :" TextColor="White" VerticalOptions="Center" FontSize="14" HorizontalOptions="Center"/>
+                                    <Label Grid.Row="2"  Text="24000.00 DA" TextColor="White" VerticalOptions="Center" FontSize="14" HorizontalOptions="Center"/>
+
+                                </Grid>
+                                 
+                        </Grid>
+
+                            <Grid ColumnDefinitions="20*,7*,63*,10*"   Margin="10" Grid.Row="1">
                                 
-                             MinimumHeightRequest="5"
-                             MaximumWidthRequest="10"
-                             MinimumWidthRequest="50"
-                              BackgroundColor="Transparent" >
+                                <Button Grid.Column="3" Text="A " FontSize="19" BackgroundColor="Orange"  MinimumHeightRequest="30" MinimumWidthRequest="70" MaximumHeightRequest="40" MaximumWidthRequest="80" />
+                                <Label Grid.Column="0"  Text="Nbr de points:" TextColor="White" VerticalOptions="Center" FontSize="14" HorizontalOptions="Center"/>
+                                <Label Grid.Column="1"  Text="{Binding Age}" TextColor="White" VerticalOptions="Center" FontSize="14" HorizontalOptions="Center"/>
+
+                            </Grid>
+                            <Grid.Triggers>
+                                <Trigger TargetType="Grid" Property="IsFocused" Value="True" >
+                                    <Setter Property="Background" Value="#4b47" ></Setter>
+                                </Trigger>
+                            </Grid.Triggers>
+                        
+                      </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+    </Grid>
+
+    
+    -->
+
+    <!--  /////////  the stock des verre  flexlyout  //////////   -->  
+    
+   <!--
+    
+     <Grid BackgroundColor="#282828" RowDefinitions="5*,95*" ColumnDefinitions="10*,70*,20*">
+    <ScrollView  Grid.Column="1" Grid.Row="1">
+            <FlexLayout Wrap="Wrap"  x:Name="myListView" AlignItems="Start" AlignContent="Start"  >
+            <BindableLayout.ItemTemplate>
+                <DataTemplate>
+                    <Grid WidthRequest="100" 
+                           HeightRequest="100" Margin="2">
+                        <Frame CornerRadius="10" 
+                           WidthRequest="100" 
+                           HeightRequest="100"
+                           BorderColor="Transparent"
+                           Background="#4b4747"
+                       />
+                        <Grid RowDefinitions="25*,25*,25*,25*" ColumnDefinitions="65*,35*" RowSpacing="5"
+                              WidthRequest="100" 
+                           HeightRequest="100" Padding="3"
+                           BackgroundColor="Transparent">
+                            <Label Text="+1.25" Grid.Column="0" Grid.Row="0" TextColor="White"/>
+                            <Label Text="+1.50" Grid.Column="0" Grid.Row="1" TextColor="White"/>
+                            <Label Text="+1.75" Grid.Column="0" Grid.Row="2" TextColor="White"/>
+                            <Label Text="+2.00" Grid.Column="0" Grid.Row="3" TextColor="White"/>
+
+                                <Label Text="12" Grid.Column="1" Grid.Row="0" TextColor="Orange"/>
+                                <Label Text="09" Grid.Column="1" Grid.Row="1" TextColor="Orange"/>
+                                <Label Text="10" Grid.Column="1" Grid.Row="2" TextColor="Orange"/>
+                                <Label Text="30" Grid.Column="1" Grid.Row="3" TextColor="Orange"/>
+                            </Grid>
                     
-                </ImageButton>
+                    </Grid>
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </FlexLayout>
+    </ScrollView>
+    </Grid>
+    
+    
+    -->
+    <!--  /////////  the stock des montures  flexlyout  //////////   -->
 
-            </Grid>
+    <!--
+    
+    
+     <Grid BackgroundColor="#282828" RowDefinitions="5*,95*" ColumnDefinitions="10*,70*,20*">
+    <ScrollView  Grid.Column="1" Grid.Row="1">
+            <FlexLayout Wrap="Wrap"  x:Name="myListView" AlignItems="Start" AlignContent="Start"  >
+            <BindableLayout.ItemTemplate>
+                <DataTemplate>
+                    <Grid WidthRequest="150" 
+                           HeightRequest="120" Margin="2">
+                        <Frame CornerRadius="10" 
+                           WidthRequest="150" 
+                           HeightRequest="120"
+                           BorderColor="Transparent"
+                           Background="#4b4747"
+                       />
+                        <Grid RowDefinitions="20*,20*,60*"   RowSpacing="5"
+                              WidthRequest="150" 
+                           HeightRequest="120" Padding="3"
+                           BackgroundColor="Transparent">
+                                <HorizontalStackLayout    Grid.Row="0">
+                                    <Label Text="077AB"  TextColor="White"/>
+                                    <Label Text="17[]45"  TextColor="White"/>
+                                </HorizontalStackLayout>
+                               
+                                <HorizontalStackLayout    Grid.Row="1">
+                            <Label Text="Rouge"  TextColor="White"/>
+                            <Label Text="12"  TextColor="Orange"/>
+                                </HorizontalStackLayout>
+                                <ImageButton Source="mon.png" CornerRadius="10" Grid.Row="2" Aspect="Fill" />
 
-           
-            
 
-
-            <Grid Grid.Row="1" Padding="25">
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.7*" />
-                    <ColumnDefinition Width="0.3*" />
-
-                </Grid.ColumnDefinitions>
-
-                <Grid Grid.Column="0">
-                    <Grid.RowDefinitions>
-
-                        <RowDefinition Height="0.1*" />
-                        <RowDefinition Height="0.1*" />
-                        <RowDefinition Height="0.1*" />
-                        <RowDefinition Height="0.1*" />
-                        <RowDefinition Height="0.1*" />
-                        <RowDefinition Height="0.1*" />
-                        <RowDefinition Height="0.1*" />
-                        <RowDefinition Height="0.1*" />
-                        <RowDefinition Height="0.1*" />
-                        <RowDefinition Height="0.1*" />
-
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.4*" />
-                        <ColumnDefinition Width="0.6*" />
-
-                    </Grid.ColumnDefinitions>
-                    <Label Grid.Row="0" Grid.Column="0" Text="Nom du Laboratoire" FontSize="14" TextColor="#b1b1be"  
-                       MinimumWidthRequest="150" VerticalTextAlignment="End"
-                               MaximumWidthRequest="190"  HeightRequest="27"
-                       ></Label>
-                    <Label Grid.Row="1" Grid.Column="0" Text="siége du Laboratoire" FontSize="14" TextColor="#b1b1be"  
-                       MinimumWidthRequest="150" VerticalTextAlignment="End"
-                               MaximumWidthRequest="190"  HeightRequest="27"
-                       ></Label>
-                    <Label Grid.Row="2" Grid.Column="0" Text="Adress email" FontSize="14" TextColor="#b1b1be"  
-                       MinimumWidthRequest="150" VerticalTextAlignment="End"
-                               MaximumWidthRequest="190"  HeightRequest="27"
-                       ></Label>
-                    <Label Grid.Row="3" Grid.Column="0" Text="Numéro de téléphone 1" FontSize="14" TextColor="#b1b1be"  
-                       MinimumWidthRequest="150" VerticalTextAlignment="End"
-                               MaximumWidthRequest="190"  HeightRequest="27"
-                       ></Label>
-                    <Label Grid.Row="4" Grid.Column="0" Text="Numéro de téléphone 2" FontSize="14" TextColor="#b1b1be"  
-                       MinimumWidthRequest="150" VerticalTextAlignment="End"
-                               MaximumWidthRequest="190"  HeightRequest="27"
-                       ></Label>
-                    <Label Grid.Row="5" Grid.Column="0" Text="Site web " FontSize="14" TextColor="#b1b1be"  
-                       MinimumWidthRequest="150" VerticalTextAlignment="End"
-                               MaximumWidthRequest="190"  HeightRequest="27"
-                       ></Label>
-                    <Label Grid.Row="6" Grid.Column="0" Text="Verres" FontSize="14" TextColor="#b1b1be"  
-                       MinimumWidthRequest="150" VerticalTextAlignment="End"
-                               MaximumWidthRequest="190"  HeightRequest="27"
-                       ></Label>
-                    <Label Grid.Row="7" Grid.Column="0" Text="Lentilles" FontSize="14" TextColor="#b1b1be"  
-                       MinimumWidthRequest="150" VerticalTextAlignment="End"
-                               MaximumWidthRequest="190"  HeightRequest="27"
-                       ></Label>
-                   
-
-                    <Frame CornerRadius="20" Padding="1" BorderColor="Transparent"
-                                      Background="#4b4747" Grid.Row="0" Grid.Column="1" MinimumWidthRequest="150"
-                               MaximumWidthRequest="190"  HeightRequest="35">
-                        <Entry Placeholder="Enter text here..."  TextColor="#b1b1be" FontSize="14"
-                                    VerticalTextAlignment="Start" MaximumHeightRequest="10"
-                                   />
-                    </Frame>
-                    <Frame CornerRadius="20" Padding="1" BorderColor="Transparent"
-                                      Background="#4b4747" Grid.Row="1" Grid.Column="1" MinimumWidthRequest="180"
-                               MaximumWidthRequest="190"  HeightRequest="35">
-                        <Entry Placeholder="Enter text here..."  TextColor="#b1b1be" FontSize="14"
-                                    VerticalTextAlignment="Start" MaximumHeightRequest="10"
-                                   />
-                    </Frame>
-                    <Frame CornerRadius="20" Padding="1" BorderColor="Transparent"
-                                      Background="#4b4747" Grid.Row="2" Grid.Column="1" MinimumWidthRequest="180"
-                               MaximumWidthRequest="190"  HeightRequest="35">
-                        <Entry Placeholder="Enter text here..."  TextColor="#b1b1be" FontSize="14"
-                                    VerticalTextAlignment="Start" MaximumHeightRequest="10"
-                                   />
-                    </Frame>
-                    <Frame CornerRadius="20" Padding="1" BorderColor="Transparent"
-                                      Background="#4b4747" Grid.Row="3" Grid.Column="1" MinimumWidthRequest="150"
-                               MaximumWidthRequest="190"  HeightRequest="35">
-                        <Entry Placeholder="Enter text here..."  TextColor="#b1b1be" FontSize="14"
-                                    VerticalTextAlignment="Start" MaximumHeightRequest="10"
-                                   />
-                    </Frame>
-                    <Frame CornerRadius="20" Padding="1" BorderColor="Transparent"
-                                      Background="#4b4747" Grid.Row="4" Grid.Column="1" MinimumWidthRequest="150"
-                               MaximumWidthRequest="190"  HeightRequest="35">
-                        <Entry Placeholder="Enter text here..."  TextColor="#b1b1be" FontSize="14"
-                                    VerticalTextAlignment="Start" MaximumHeightRequest="10"
-                                   />
-                    </Frame>
-                    <Frame CornerRadius="20" Padding="1" BorderColor="Transparent"
-                                      Background="#4b4747" Grid.Row="5" Grid.Column="1" MinimumWidthRequest="150"
-                               MaximumWidthRequest="190"  HeightRequest="35">
-                        <Entry Placeholder="Enter text here..."  TextColor="#b1b1be" FontSize="14"
-                                    VerticalTextAlignment="Start" MaximumHeightRequest="10"
-                                   />
-                    </Frame>
-                    <CheckBox Grid.Row="6" Grid.Column="1" IsChecked="true" Color="#ff9000"  />
-                    <CheckBox Grid.Row="7" Grid.Column="1" IsChecked="true" Color="#ff9000" />
+                            </Grid>
                     
+                    </Grid>
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </FlexLayout>
+    </ScrollView>
+    </Grid>
+    
+    -->
+
+    <!--  /////////  the stock Autre  flexlyout  //////////   -->
+    
+    <!--
+    
+     <Grid BackgroundColor="#282828" RowDefinitions="5*,95*" ColumnDefinitions="10*,70*,20*">
+        <ScrollView  Grid.Column="1" Grid.Row="1">
+            <FlexLayout Wrap="Wrap"  x:Name="myListView" AlignItems="Start" AlignContent="Start"  >
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Grid WidthRequest="150" 
+                           HeightRequest="180" Margin="2">
+                            <Frame CornerRadius="10" 
+                           WidthRequest="150" 
+                           HeightRequest="180"
+                           BorderColor="Transparent"
+                           Background="#4b4747"
+                       />
+                            <Grid RowDefinitions="15*,15*,70*"   RowSpacing="5"
+                              WidthRequest="150" 
+                           HeightRequest="180" Padding="3"
+                           BackgroundColor="Transparent">
+                                <HorizontalStackLayout    Grid.Row="0">
+                                    <Label Text="Avisor" FontSize="16" TextColor="White"/>
+                                   
+                                </HorizontalStackLayout>
+
+                                <HorizontalStackLayout    Grid.Row="1">
+                                    <Label Text="aqua soft"  TextColor="White"/>
+                                    <Label Text="12"  TextColor="Orange"/>
+                                </HorizontalStackLayout>
+                                <ImageButton Source="gp.jpg" CornerRadius="10" Grid.Row="2" Aspect="Fill" />
 
 
-                </Grid>
-                <Grid Grid.Column="1" >
-                    <Grid.RowDefinitions >
-                        <RowDefinition Height="0.2*" />
-                        <RowDefinition Height="0.05*" />
-                        <RowDefinition Height="0.05*" />
-                        <RowDefinition Height="0.3*" />
-                        <RowDefinition Height="0.3*" />
-                        <RowDefinition Height="0.05*" />
-                        <RowDefinition Height="0.05*" />
+                            </Grid>
 
-                    </Grid.RowDefinitions>
-                    <Button Text="Logo du Laboratoire " CornerRadius="20" FontSize="12" 
-                           Clicked="Onlogoclicked" WidthRequest=" 200" HeightRequest="30"
-                            Background="#282828" Grid.Row="1"></Button>
-                    <Image Grid.Row="3" x:Name="logolab" Source="patiant.png" ></Image>
-                    <ImageButton Grid.Row="5" Source="plus.png" 
-                          BackgroundColor="Transparent" 
-                             CornerRadius="10"
-                             Aspect="AspectFit" Padding="0"
-                            MaximumHeightRequest="50"
-                             MinimumHeightRequest="10"
-                             MaximumWidthRequest="50"
-                             MinimumWidthRequest="10"
-                             >
-
-                    </ImageButton>
-
-                </Grid>
-
-            </Grid>
+                        </Grid>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </FlexLayout>
+        </ScrollView>
+    </Grid>
 
 
+    
+    -->
 
 
-        </Grid>
-    </Frame>
-</mct:Popup>
+    <!--  /////////  the laboratoires  flexlyout   //////////   -->
+    
+    
+    <!--
+    <Grid BackgroundColor="#282828" RowDefinitions="5*,95*" ColumnDefinitions="10*,70*,20*">
+        <ScrollView  Grid.Column="1" Grid.Row="1">
+            <FlexLayout Wrap="Wrap"  x:Name="myListView" AlignItems="Start" AlignContent="Start"  >
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Grid WidthRequest="300" 
+                           HeightRequest="150" Margin="2">
+                            <Frame CornerRadius="10" 
+                           WidthRequest="300" 
+                           HeightRequest="150"
+                           BorderColor="Transparent"
+                           Background="#4b4747"
+                       />
+                            <Grid RowDefinitions="20*,80*"   RowSpacing="5"
+                              WidthRequest="300" 
+                           HeightRequest="150" Padding="3"
+                           BackgroundColor="Transparent">
+                                <HorizontalStackLayout HorizontalOptions="Center"   Grid.Row="0">
+                                    <Label Text="N O V A T I S" FontSize="16" TextColor="White" HorizontalOptions="Center"/>
+                                   
+                                </HorizontalStackLayout>
+                                <ImageButton Source="novatis.jpg" CornerRadius="10" Grid.Row="2" Aspect="Fill" />
+
+
+                            </Grid>
+
+                        </Grid>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </FlexLayout>
+        </ScrollView>
+    </Grid>
+    -->
+
+    <!--  /////////  the distributeurs  flexlyout //////////   -->
+
+    
+    <!--
+    <Grid BackgroundColor="#282828" RowDefinitions="5*,95*" ColumnDefinitions="10*,70*,20*">
+        <ScrollView  Grid.Column="1" Grid.Row="1">
+            <FlexLayout Wrap="Wrap"  x:Name="myListView" AlignItems="Start" AlignContent="Start"  >
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Grid WidthRequest="300" 
+                           HeightRequest="180" Margin="2">
+                            <Frame CornerRadius="10" 
+                           WidthRequest="300" 
+                           HeightRequest="180"
+                           BorderColor="Transparent"
+                           Background="#4b4747"
+                       />
+                            <Grid RowDefinitions="20*,80*"   RowSpacing="5"
+                              WidthRequest="300" 
+                           HeightRequest="180" Padding="3"
+                           BackgroundColor="Transparent">
+                                <HorizontalStackLayout HorizontalOptions="Center"   Grid.Row="0">
+                                    <Label Text="N O V A T I S" FontSize="16" TextColor="White" HorizontalOptions="Center"/>
+                                   
+                                </HorizontalStackLayout>
+                                <ImageButton Source="zzz.png" CornerRadius="10" Grid.Row="2" Aspect="Fill" />
+
+
+                            </Grid>
+
+                        </Grid>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </FlexLayout>
+        </ScrollView>
+    </Grid>
+    
+    
+    -->
+
+
+    <!--  /////////  the fournisseurs  flexlyout  //////////   -->
+    
+    <!--
+    
+    <Grid BackgroundColor="#282828" RowDefinitions="5*,95*" ColumnDefinitions="10*,70*,20*">
+        <ScrollView  Grid.Column="1" Grid.Row="1">
+            <FlexLayout Wrap="Wrap"  x:Name="myListView" AlignItems="Start" AlignContent="Start"  >
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Grid WidthRequest="150" 
+                           HeightRequest="150" Margin="2">
+                            <Frame CornerRadius="10" 
+                           WidthRequest="150" 
+                           HeightRequest="150"
+                           BorderColor="Transparent"
+                           Background="#4b4747"
+                       />
+                            
+                            <Grid RowDefinitions="20*,20*,20*,20*,20*" ColumnDefinitions="65*,35*" RowSpacing="5"
+                              WidthRequest="150" 
+                           HeightRequest="150" Padding="3"
+                           BackgroundColor="Transparent">
+                                <Label Text="Toufik" Grid.Column="0" Grid.Row="0" TextColor="White"/>
+                                <Label Text="Monture" Grid.Column="0" Grid.Row="1" TextColor="White"/>
+                                <Label Text="verre" Grid.Column="0" Grid.Row="2" TextColor="White"/>
+                                <Label Text="lentille" Grid.Column="0" Grid.Row="3" TextColor="White"/>
+                                <Label Text="autre" Grid.Column="0" Grid.Row="4" TextColor="White"/>
+
+                                <CheckBox   Grid.Column="1" Grid.Row="1" Color="Orange"/>
+                                <CheckBox   Grid.Column="1" Grid.Row="2" Color="Orange"/>
+                                <CheckBox   Grid.Column="1" Grid.Row="3" Color="Orange"/>
+                                <CheckBox   Grid.Column="1" Grid.Row="4" Color="Orange"/>
+
+                            </Grid>
+
+                        </Grid>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </FlexLayout>
+        </ScrollView>
+    </Grid>
+    
+    
+    -->
+
+    <!--  /////////  the type de verres  flexlyout  //////////   -->
+
+ 
+    <Grid BackgroundColor="#282828" RowDefinitions="5*,95*" ColumnDefinitions="10*,70*,20*">
+        <ScrollView  Grid.Column="1" Grid.Row="1">
+            <FlexLayout Wrap="Wrap"  x:Name="myListView" AlignItems="Start" AlignContent="Start"  >
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Grid WidthRequest="300" 
+                           HeightRequest="180" Margin="2">
+                            <Frame CornerRadius="10" 
+                           WidthRequest="300" 
+                           HeightRequest="180"
+                           BorderColor="Transparent"
+                           Background="#4b4747"
+                       />
+                            <Grid RowDefinitions="30*,40*,30*"   RowSpacing="5"
+                              WidthRequest="300" 
+                           HeightRequest="180" Padding="3"
+                           BackgroundColor="Transparent">
+                                <HorizontalStackLayout HorizontalOptions="Center"   Grid.Row="0">
+                                    <Label Text="HMC"  TextColor="White" HorizontalOptions="Center"/>
+                                    <Label Text="TRG"  TextColor="White" HorizontalOptions="Center"/>
+                                    <Label Text="1.61"  TextColor="White" HorizontalOptions="Center"/>
+
+                                </HorizontalStackLayout>
+                                <VerticalStackLayout HorizontalOptions="Center"   Grid.Row="1">
+                                    <Label Text="NOVADIGITAL 1.61 mitsui" FontSize="16" TextColor="orange" HorizontalOptions="Center"/>
+                                    <Label Text=" ecoline durci " FontSize="16" TextColor="orange" HorizontalOptions="Center"/>
+                                    <Label Text=" novatis " FontSize="14" TextColor="White" HorizontalOptions="Center"/>
+                                </VerticalStackLayout>
+
+                                <ImageButton Source="novatis.jpg" CornerRadius="10" Grid.Row="2" Aspect="Fill" />
+
+                            </Grid>
+
+                        </Grid>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </FlexLayout>
+        </ScrollView>
+    </Grid>
+    
+    
+ 
+
+
+</mopups:PopupPage>

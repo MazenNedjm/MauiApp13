@@ -352,7 +352,7 @@
                             </Grid>
                             <datagride:DataGrid Grid.Column="1"
                     
-                    RowHeight="50" HeaderHeight="30" HeaderBackground="#282828" Background="#282828"
+                    RowHeight="50" HeaderHeight="3" HeaderBackground="#282828" Background="#282828"
                     SelectionEnabled="False" BorderColor="Transparent" 
                     ItemsSource="{Binding Teams}" >
                     <datagride:DataGrid.Columns>
@@ -366,7 +366,7 @@
                             </datagride:DataGridColumn.CellTemplate>
                         </datagride:DataGridColumn>
                         <!---#FF0000! G4 -->
-                        <datagride:DataGridColumn Title="G4" PropertyName="G4" Width="60">
+                        <datagride:DataGridColumn  PropertyName="G4" Width="60">
                             <datagride:DataGridColumn.CellTemplate>
                                 <DataTemplate>
                                     <Entry Text="{Binding TeamName}" Placeholder="0.00"  TextColor="White" />
