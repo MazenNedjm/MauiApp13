@@ -19,7 +19,7 @@
 
 
     <!---#FF0000! the main GRID -->
-    <Grid MinimumHeightRequest="1000" MinimumWidthRequest="1000">
+  <Grid MinimumHeightRequest="1000" MinimumWidthRequest="1000">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>

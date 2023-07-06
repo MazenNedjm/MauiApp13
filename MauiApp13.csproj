@@ -50,9 +50,13 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\gp.jpg" />
+	  <None Remove="Resources\Images\homebig.svg" />
 	  <None Remove="Resources\Images\iconp.svg" />
+	  <None Remove="Resources\Images\logoone.svg" />
 	  <None Remove="Resources\Images\mon.svg" />
 	  <None Remove="Resources\Images\novatis.jpg" />
+	  <None Remove="Resources\Images\stocka.svg" />
+	  <None Remove="Resources\Images\stockbig.svg" />
 	  <None Remove="Resources\Images\zzz.png" />
 	</ItemGroup>
 
@@ -128,6 +132,9 @@
 	  <MauiXaml Update="pages\stock\verresajout.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="pages\testzest.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="pages\vendeurs\mainvendeurs.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -153,6 +160,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="pages\vente\ventenew.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Resources\Styles\DarkTheme.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="secondmain.xaml">

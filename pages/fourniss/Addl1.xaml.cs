@@ -2,7 +2,7 @@ using CommunityToolkit.Maui.Views;
 using Microsoft.Maui.Storage;
 namespace MauiApp13.pages.fourniss;
 
-public partial class Addl1 
+public partial class Addl1 : ContentView
 {
  
     public Addl1()
@@ -87,10 +87,16 @@ public partial class Addl1
                 new Person { Name = "BAZIN Salah", Age = 06 ,namber= "Optometriste"  ,dernierecorrection="Nbr d'ordonance :"  },
 
             };
-        BindableLayout.SetItemsSource(myListView, people);
+
+       // myListView.ItemsSource = people;
+     BindableLayout.SetItemsSource(myListView, people);
 
     }
-
+    private void home_Tapped(object sender, EventArgs e)
+    {
+        // d
+        
+    }
     public class Person
     {
         public string Name { get; set; }

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp13.Resources.Styles.DarkTheme">
+
+
+
+
+
+    <!--<Color x:Key="PrimaryColor">#FFFFFF</Color>
+    <Color x:Key="SecondaryColor">#E8E8E8</Color>
+    <Color x:Key="AccentColor">#ff9000</Color>
+    <Color x:Key="ShadowColor">#282828</Color>
+    <Color x:Key="TextColor">#000000</Color>-->
+
+      
+    
+     <Color x:Key="PrimaryColor">#282828</Color>
+    <Color x:Key="SecondaryColor">#383636</Color>
+    <Color x:Key="ShadowColor">#4b4747</Color>
+    <Color x:Key="AccentColor">#ff9000</Color>
+    <Color x:Key="TextColor">#FFFFFF</Color>
+    
+    
+
+    
+
+
+    <Style TargetType="Image"  x:Key="MenuImage">
+
+
+
+         
+        <Setter Property="MaximumHeightRequest" Value="20"/>
+        <Setter Property="MinimumHeightRequest" Value="10"/>
+        <Setter Property="MaximumWidthRequest" Value="30"/>
+        <Setter Property="MinimumWidthRequest" Value="10"/>
+        <Setter Property="Opacity" Value="60"/>
+
+
+    </Style>
+    <Style TargetType="ImageButton"  x:Key="MenuImageButton">
+         
+        <Setter Property="BackgroundColor" Value="Transparent"/>
+         
+        <Setter Property="Padding" Value="5,0,20,0"/>
+        <Setter Property="CornerRadius" Value="10"/>
+        <Setter Property="Margin" Value="2"/>
+        <Setter Property="HorizontalOptions" Value="Start"/>
+        <Setter Property="MaximumHeightRequest" Value="25"/>
+        <Setter Property="MinimumHeightRequest" Value="10"/>
+        <Setter Property="MinimumWidthRequest" Value="10"/> 
+
+
+
+        <Style.Triggers>
+            <Trigger TargetType="ImageButton" Property="IsPressed" Value="True">
+                <Setter Property="BackgroundColor" Value="{StaticResource SecondaryColor}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="Button" x:Key="SwitchingButton">
+        <Setter Property="HeightRequest" Value="50"/>
+        <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}"/>
+        <Setter Property="CornerRadius" Value="10"/>
+
+        <Style.Triggers>
+            <Trigger TargetType="Button" Property="IsFocused" Value="True" >
+                <Setter Property="Background" Value="{StaticResource SecondaryColor}" ></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<mopups:PopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               xmlns:mct="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
            xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
@@ -510,7 +510,7 @@
     
     
     <!--
-    <Grid BackgroundColor="#282828" RowDefinitions="5*,95*" ColumnDefinitions="10*,70*,20*">
+    Grid BackgroundColor="#282828" RowDefinitions="5*,95*" ColumnDefinitions="10*,70*,20*">
         <ScrollView  Grid.Column="1" Grid.Row="1">
             <FlexLayout Wrap="Wrap"  x:Name="myListView" AlignItems="Start" AlignContent="Start"  >
                 <BindableLayout.ItemTemplate>
@@ -518,7 +518,7 @@
                         <Grid WidthRequest="300" 
                            HeightRequest="150" Margin="2">
                             <Frame CornerRadius="10" 
-                           WidthRequest="300" 
+            <               WidthRequest="300" 
                            HeightRequest="150"
                            BorderColor="Transparent"
                            Background="#4b4747"
@@ -632,7 +632,7 @@
 
     <!--  /////////  the type de verres  flexlyout  //////////   -->
 
- 
+    <!--
     <Grid BackgroundColor="#282828" RowDefinitions="5*,95*" ColumnDefinitions="10*,70*,20*">
         <ScrollView  Grid.Column="1" Grid.Row="1">
             <FlexLayout Wrap="Wrap"  x:Name="myListView" AlignItems="Start" AlignContent="Start"  >
@@ -673,8 +673,92 @@
         </ScrollView>
     </Grid>
     
-    
- 
+    -->
 
 
-</mopups:PopupPage>
+    <Grid RowDefinitions="50,80,*">
+
+        <Grid Margin="10,0,100,0"  HorizontalOptions="Fill" Grid.Row="0" BackgroundColor="Transparent" RowDefinitions="99*,1*"
+             
+             >
+            <Grid Grid.Row="0" BackgroundColor="Transparent" HorizontalOptions="Start"  ColumnDefinitions="Auto,20*,20*,20*,20*,Auto" RowDefinitions="90*,10*"  >
+
+                <Button Grid.Column="1" Text="Fournisseur" TextColor="{StaticResource TextColor}"  BorderColor="Transparent" Clicked="home_Tapped"  BackgroundColor="Transparent" />
+                <Rectangle x:Name="fourniss" Margin="10,0,0,0" HeightRequest="2" Grid.Row="1" Grid.Column="1"  HorizontalOptions="FillAndExpand"   BackgroundColor="{StaticResource AccentColor}"/>
+
+                <Button Grid.Column="2"   Text="Laboratoires" TextColor="{StaticResource TextColor}" BorderColor="Transparent" BackgroundColor="Transparent"   />
+                <BoxView x:Name="labo" WidthRequest="40" Margin="20,0,10,0" HeightRequest="0.4" Grid.Row="1" Grid.Column="2"    Color="Transparent" />
+
+                <Button Grid.Column="3" Text="Distributeurs" TextColor="{StaticResource TextColor}" BorderColor="Transparent" BackgroundColor="Transparent"  />
+                <BoxView x:Name="dis" Margin="10,0,0,0" HeightRequest="0.4" Grid.Row="1" Grid.Column="3"  HorizontalOptions="FillAndExpand" Color="Transparent" />
+
+                <Button Grid.Column="4" Text="Catalogues" TextColor="{StaticResource TextColor}" BorderColor="Transparent" BackgroundColor="Transparent" />
+                <BoxView x:Name="cat" Margin="10,0,0,0" HeightRequest="0.4" Grid.Row="1" Grid.Column="4"  HorizontalOptions="FillAndExpand" Color="Transparent" />
+
+
+            </Grid>
+
+            <Grid Grid.Row="0" VerticalOptions="End" HorizontalOptions="FillAndExpand">
+                <BoxView Margin="10,0,100,2.5" HeightRequest="0.4"   HorizontalOptions="FillAndExpand" Color="#c6c6ce" />
+
+
+
+
+            </Grid>
+
+
+
+           
+            
+        </Grid>
+            
+         
+        <Grid Padding="5,20,20,0"  Grid.Row="1"  RowDefinitions="50*,50*">
+            <Label  Grid.Row="0" TextColor="{StaticResource TextColor}" Text="NOVATIS" />
+            <BoxView Grid.Row="1" VerticalOptions="Start" HeightRequest="0.4" Margin="0,0,20,0" HorizontalOptions="Start" Color="#c6c6ce" MaximumWidthRequest="260" MinimumWidthRequest="200"/>
+
+
+
+
+        </Grid>
+        <ScrollView    Grid.Row="2">
+            <FlexLayout Wrap="Wrap"  x:Name="myListView" AlignItems="Start" AlignContent="Start"  >
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Grid WidthRequest="100" 
+                           HeightRequest="100" Margin="2">
+                            <Frame CornerRadius="10" 
+                           WidthRequest="100" 
+                           HeightRequest="100"
+                           BorderColor="Transparent"
+                           Background="{StaticResource SecondaryColor}"
+                       />
+                            <Grid RowDefinitions="25*,25*,25*,25*" ColumnDefinitions="65*,35*" RowSpacing="5"
+                              WidthRequest="100" 
+                           HeightRequest="100" Padding="3"
+                           BackgroundColor="Transparent">
+                                <Label Text="+1.25" Grid.Column="0" Grid.Row="0" TextColor="{StaticResource TextColor}"/>
+                                <Label Text="+1.50" Grid.Column="0" Grid.Row="1" TextColor="{StaticResource TextColor}"/>
+                                <Label Text="+1.75" Grid.Column="0" Grid.Row="2" TextColor="{StaticResource TextColor}"/>
+                                <Label Text="+2.00" Grid.Column="0" Grid.Row="3" TextColor="{StaticResource TextColor}"/>
+
+                                <Label Text="12" Grid.Column="1" Grid.Row="0" TextColor="Orange"/>
+                                <Label Text="09" Grid.Column="1" Grid.Row="1" TextColor="Orange"/>
+                                <Label Text="10" Grid.Column="1" Grid.Row="2" TextColor="Orange"/>
+                                <Label Text="30" Grid.Column="1" Grid.Row="3" TextColor="Orange"/>
+                            </Grid>
+
+                        </Grid>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </FlexLayout>
+        </ScrollView>
+    </Grid>
+
+
+
+
+
+
+
+</ContentView>

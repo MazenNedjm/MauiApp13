@@ -23,7 +23,7 @@ public partial class MainPage : ContentPage
 
 	{
 
-        await Navigation.PushAsync(new secondmain(),false);
+        await Navigation.PushAsync(new testzest(),false);
 		
     }
 	private void Onclicked(object sender, EventArgs e)
@@ -32,7 +32,7 @@ public partial class MainPage : ContentPage
     }
     private void Onpop(object sender, EventArgs e)
     {
-        MopupService.Instance.PushAsync(new pages.fourniss.Addl1());
+       // MopupService.Instance.PushAsync(new pages.fourniss.Addl1());
     }
     private void Onpop1(object sender, EventArgs e)
     {
